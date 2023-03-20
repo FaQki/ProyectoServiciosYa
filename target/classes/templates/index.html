@@ -27,7 +27,11 @@
 
     <header class="hero">      
         <div class="navbar">  
-          <div><h2 class="nav__logo">ChacrasApp</h2></div>                
+          <div><h2 class="nav__logo">ChacrasApp</h2></div>  
+          <div class="nav-links"> 
+            
+             
+                        
           <div class="nav-header">
                       
               <!-- responsive navbar toggle button -->
@@ -40,12 +44,12 @@
                 </label>
               </div>
               <!-- Navbar items -->          
-              <div class="nav-links">            
+                      
                 <a href="#">Inicio</a>
                 <a href="#sobremi">Nosotros</a>
                 <!-- Dropdown menu -->
                 <div class="dropdown">
-                  <a class="dropBtn" href="Rubros.html"
+                  <a class="dropBtn" href="#Acerca"
                     >Servicios
                     <i class="fas fa-angle-down"></i>
                   </a>
@@ -57,9 +61,9 @@
                 </div>
                 <a href="#contacto">Contacto</a>
                 <div class="dropdown">
-                  <a class="dropBtn" href="iniciarSesion.html">Iniciar Sesión
+                  <a id="iniciarSesion" class="dropBtn" href="iniciarSesion.html">Iniciar Sesión
                     <i class="fas fa-angle-down"></i>
-                  </a>
+                  </a>                
                   
                   <div class="drop-content">
                     <a href="RegistroProveedor.html">Proveedor</a>
@@ -69,7 +73,8 @@
               </div>
           </div>      
     </header>  
-        
+   
+    
  
         <section class="hero__main__container">
           
@@ -158,11 +163,69 @@
         </div>
       </section>
 
- 
+       <!--Preguntas frecuentes -->
+
+      <section class="questions container">
+        <h2 class="subtitle">Preguntas frecuentes</h2>
+        <p class="questions__paragraph">
+         Que más consultan nuestros usuarios.
+        </p>
+
+        <section class="questions__container">
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                ¿Qué requisitos se necesitan para solicitar un servicio?
+                <span class="questions__arrow">
+                  <img src="./images/arrow.svg" class="questions__img" />
+                </span>
+              </h3>
+
+              <p class="questions__show">
+                Para poder ver y solicitar cualquier servicio que ofrecen los proveedores
+                se necesita estar registrado e iniciar sesión como usuario.
+              </p>
+            </div>
+          </article>
+
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                ¿Como me puedo conviertir en un proveedor?
+                <span class="questions__arrow">
+                  <img src="./images/arrow.svg" class="questions__img" />
+                </span>
+              </h3>
+
+              <p class="questions__show">
+              Para poder ser un proveedor debes rellenar un formulario al registrarte
+              completando una serie de preguntas y pertenecer a alguno de los tres barrios de
+              La localidad de Chacras de Coria en Mendoza.
+              </p>
+            </div>
+          </article>
+
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                ¿Cuánto cuesta contratar un servicio?
+                <span class="questions__arrow">
+                  <img src="./images/arrow.svg" class="questions__img" />
+                </span>
+              </h3>
+
+              <p class="questions__show">
+                Cada tarifa lo colocan los proveedores dependiendo del trabajo que deben realizar, puedes consultar en el perfil 
+                a través de un formulario de presupuesto de servicio.
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+      
 
       
-    <footer>
-      
+    <footer>      
       <section id="contacto" class="footer__copy container">
         <div class="footer__social">
           <a href="#" class="footer__icons"
@@ -181,9 +244,11 @@
         </h3>
       </section>
     </footer>   
-
-    
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="js/sweetAlert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/slider.js"></script>
+    <script src="js/questions.js"></script>
    
   </body>
 </html>

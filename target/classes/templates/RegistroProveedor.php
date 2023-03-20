@@ -209,7 +209,7 @@ $insertarDatos = "INSERT INTO datos VALUES( '$id',
 $ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
 
 if(!ejecutarInsertar){
-  echo"Error en la linea de sql;
+  echo"Error en la linea de sql";
 }
 }
 ?>
