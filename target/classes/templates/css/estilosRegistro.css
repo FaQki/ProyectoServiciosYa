@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Urbanist", sans-serif;
+}
+
+.img_body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.img_body_fondo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  color: #fff;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    "nav"
+    "content";
+  position: fixed;
+  width: 100%;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Urbanist", sans-serif;
+}
+
+.navbar {
+  background-color: #244583;
+  grid-area: nav;
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  gap: 1em;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+.navbar .nav-header {
+  margin: auto;
+  display: inline;
+}
+.navbar .nav-header .nav-logo {
+  display: inline-block;
+  margin-top: -7px;
+}
+.navbar .nav-links {
+  display: contents;
+
+  font-size: 15px;
+}
+
+/*Tipografia menu*/
+.navbar .nav-links a {
+  font-family: "Urbanist", sans-serif;
+  padding: 20px 12px;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+}
+/* Hover effects */
+.navbar .nav-links a:hover {
+  background-color: #2a5298;
+  border-radius: 6px;
+}
+
+/* responsive navbar toggle button */
+.navbar #nav-check,
+.navbar .nav-btn {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .navbar .nav-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  /*Icono Hamburguesa*/
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 80px;
+    height: 70px;
+    padding: 25px;
+  }
+
+  /*Color lineas hamburguesa*/
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #ffffff;
+  }
+  .navbar .nav-btn label:hover,
+  .navbar #nav-check:checked ~ .nav-btn label {
+    transition: all 0.5s ease;
+  }
+  /* Color fondo Menu Hamburguesa*/
+  .navbar .nav-links {
+    position: absolute;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-image: linear-gradient(
+      to top,
+      #1e3c72 0%,
+      #1e3c72 1%,
+      #2a5298 100%
+    );
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    right: 0px;
+    border-radius: 6px;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+  .contenedor__todo {
+    padding-top: 220px;
+  }
+
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  .navbar .nav-links .loginBtn {
+    padding: 10px 40px;
+    margin: 20px;
+    font-size: 14px;
+    font-family: "Urbanist", sans-serif;
+    color: rgb(255, 255, 255);
+  }
+  /* Responsive dropdown code */
+  .navbar .nav-links .dropdown,
+  .navbar .nav-links .dropdown2 {
+    float: none;
+    width: 100%;
+  }
+  .navbar .nav-links .drop-content,
+  .navbar .nav-links .drop-content2 {
+    position: relative;
+    background-color: #22437e;
+    top: 0px;
+    left: 0px;
+  }
+  /* Text color sub menu Hamburguesa */
+  .navbar .nav-links .drop-content a {
+    color: rgb(255, 255, 255);
+  }
+}
+
+/* Dropdown menu CSS code */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.drop-content,
+.drop-content2 {
+  display: none;
+  position: absolute;
+  background-color: #2a5298;
+  border-radius: 6px;
+  min-width: 120px;
+  font-size: 16px;
+  font-family: "Urbanist", sans-serif;
+  top: 34px;
+}
+/* on hover show dropdown */
+.dropdown:hover .drop-content,
+.dropdown2:hover .drop-content2 {
+  display: block;
+}
+/* Color lineas links */
+.drop-content a {
+  padding: 12px 10px;
+  border-bottom: 1px solid #2a5298;
+  display: block;
+  transition: all 0.5s ease !important;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgba(29, 114, 211, 0.402);
+}
+.dropdown:hover .dropBtn,
+.dropdown2:hover .dropBtn2 {
+  background-color: rgba(29, 114, 211, 0.402);
+}
+.dropdown2 .drop-content2 {
+  position: absolute;
+  left: 120px;
+  top: 126px;
+}
+.dropBtn2 i {
+  margin-left: 15px;
+}
+
+main {
+  height: 90px;
+  width: 100%;
+  margin: auto;
+  margin-top: 170px;
+}
+
+.contenedor__todo {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: -950px;
+
+  text-align: center;
+  justify-content: center;
+}
+
+.caja__trasera {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #244583;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.caja__trasera div {
+  margin: 100px 0 100px 50px;
+  color: white;
+  transition: all 500ms;
+  text-align: center;
+  justify-content: center;
+}
+
+.caja__trasera div p,
+.caja__trasera button {
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.caja__trasera div h3 {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.caja__trasera div p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.caja__trasera button {
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+  background: #fff;
+  color: #46a2fd;
+}
+
+/*Formularios*/
+
+.contenedor__login-register {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+  text-align: center;
+
+  /*La transicion va despues del codigo JS*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contenedor__login-register form {
+  width: 100%;
+  padding: 80px 20px;
+  background: white;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.contenedor__login-register form h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #46a2fd;
+}
+
+.contenedor__login-register form input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  outline: none;
+}
+
+.contenedor__login-register form button {
+  padding: 10px 40px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background: #46a2fd;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  justify-content: center;
+}
+
+.formulario__login {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  color: #fff;
+  outline: none;
+  padding: 10px 0;
+}
+.formulario__register {
+  display: none;
+}
+
+/*.custom-file-label {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  display: flex;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background: #46a2fd;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  justify-content: center;
+}*/
+
+#customFile {
+  width: 100%;
+  margin: 0;
+  font-family: "Urbanist", sans-serif;
+  border: none;
+  background: #3a96f1;
+  font-size: 14px;
+  display: flex;
+  border-radius: 12px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    margin-top: 50px;
+  }
+
+  .caja__trasera {
+    max-width: 350px;
+    height: 300px;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .caja__trasera div {
+    margin: 0px;
+    position: absolute;
+  }
+
+  /*Formularios*/
+
+  .contenedor__login-register {
+    top: -10px;
+    left: -5px;
+    margin: auto;
+  }
+
+  .contenedor__login-register form {
+    position: relative;
+  }
+}

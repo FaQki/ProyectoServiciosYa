@@ -1,0 +1,189 @@
+<!--
+<?php
+ 
+ session_start();
+ if(!isset($_SESSION['usuario'])){ 
+   header("location: bienvenida.php"); 
+  
+ }
+
+
+
+?>
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Proveedor de servicios</title>
+    <link rel="stylesheet" href=css/estilos.css />
+    
+  </head>
+  <body>
+   
+
+    <header class="hero">      
+        <div class="navbar">  
+          <div><h2 class="nav__logo">ChacrasApp</h2></div>                
+          <div class="nav-header">
+                      
+              <!-- responsive navbar toggle button -->
+              <input type="checkbox" id="nav-check" />
+              <div class="nav-btn">
+                <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+              </div>
+              <!-- Navbar items -->          
+              <div class="nav-links">            
+                <a href="#">Inicio</a>
+                <a href="#sobremi">Nosotros</a>
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                  <a class="dropBtn" href="Rubros.html"
+                    >Servicios
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <!--<div class="drop-content">
+                    <a href="#">Electricista</a>
+                    <a href="#">Gasista</a>
+                    <a href="#">Plomería</a>
+                  </div>-->
+                </div>
+                <a href="#contacto">Contacto</a>
+                <div class="dropdown">
+                  <a class="dropBtn" href="iniciarSesion.html">Iniciar Sesión
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  
+                  <div class="drop-content">
+                    <a href="RegistroProveedor.html">Proveedor</a>
+                    <a href="registroUsuario.html">Usuarios</a>
+                  </div>
+                </div>
+              </div>
+          </div>      
+    </header>  
+        
+ 
+        <section class="hero__main__container">
+          
+          <div class="hero__texts">
+            <h1 class="hero__title">
+              Contactate con los
+              <p>mejores proveedores</p>
+              de servicios.
+            </h1>
+          </div>    
+          <section class="testimony" id="Acerca">
+            <div class="testimony__container container">
+              <img
+                src="./images/leftarrow.png"
+                class="testimony__arrow"
+                id="before"
+              />
+  
+              <section class="testimony__body testimony__body--show" data-id="1">
+                <div class="testimony__texts">
+                  <h2 class="subtitlee">Electricista<br /></h2>
+                </div>
+  
+                <figure class="testimony__picture">
+                  <img src="./images/electricista.jpg" class="testimony__img" />
+                </figure>
+              </section>
+  
+              <section class="testimony__body" data-id="2">
+                <div class="testimony__texts">
+                  <h2 class="subtitlee">Gasista<br /></h2>
+                </div>
+  
+                <figure class="testimony__picture">
+                  <img src="./images/gasista.jpg" class="testimony__img" />
+                </figure>
+              </section>
+  
+              <section class="testimony__body" data-id="3">
+                <div class="testimony__texts">
+                  <h2 class="subtitlee">Plomería<br /></h2>
+                </div>
+  
+                <figure class="testimony__picture">
+                  <img src="./images/plomeria.jpg" class="testimony__img" />
+                </figure>
+              </section>
+  
+              <img
+                src="./images/rightarrow.png"
+                class="testimony__arrow"
+                id="next"
+              />
+            </div>
+          </section>
+           
+        </section>
+        
+          <!--Forma-->
+          <div style="height: 150px; overflow: hidden" class="hero__waves">
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              style="height: 100%; width: 100%"
+            >
+              <path
+                d="M0.00,49.99 C262.08,217.40 378.89,-120.09 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff"
+              ></path>
+            </svg>
+          </div>  
+        </div> 
+      </div>  
+     
+      <!-- SECCION SOBRE MI (la pagina) -->
+      <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+          <h2 a href="nav__links">¿Sabías que?</h2>
+          <p>
+            <span>Somos tres barrios cerrados</span> de la localidad de Chacras
+            de Coria en Mendoza, <br> 
+            que nos juntamos para formar una red de proveedores (Electricista,
+            Gasista, Plomería, etc.) </br> con la mejor calidad de profecionales del
+            lugar.
+          </p>
+        </div>
+      </section>
+
+ 
+
+      
+    <footer>
+      
+      <section id="contacto" class="footer__copy container">
+        <div class="footer__social">
+          <a href="#" class="footer__icons"
+            ><img src="./images/facebook.svg" class="footer__img"
+          /></a>
+          <a href="#" class="footer__icons"
+            ><img src="./images/twitter.svg" class="footer__img"
+          /></a>
+          <a href="#" class="footer__icons"
+            ><img src="./images/youtube.svg" class="footer__img"
+          /></a>
+        </div>
+
+        <h3 class="footer__copyright">
+          Derechos reservados &copy; Grupo B
+        </h3>
+      </section>
+    </footer>   
+
+    
+    <script src="js/slider.js"></script>
+   
+  </body>
+</html>

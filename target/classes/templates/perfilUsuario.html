@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Proveedor de servicios</title>
+    <link rel="stylesheet" href=css/estilosPerfil.css />
+  </head>
+  <body>
+    <header class="hero">      
+        <div class="navbar">  
+          <div><h2 class="nav__logo">ChacrasApp</h2></div>                
+          <div class="nav-header">                      
+              <!-- responsive navbar toggle button -->
+              <input type="checkbox" id="nav-check" />
+              <div class="nav-btn">
+                <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+              </div>
+              <!-- Navbar items -->          
+              <div class="nav-links">            
+                <a href="index.html">Inicio</a>
+                <a href="sobreLaPagina.html">Nosotros</a>
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                  <a class="dropBtn" href="Rubros.html">Servicios
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <!--<div class="drop-content">
+                    <a href="#">Electricista</a>
+                    <a href="#">Gasista</a>
+                    <a href="#">Plomería</a>
+                  </div>
+                </div>-->
+                <a href="#">Regístrate</a>
+                <div class="dropdown">
+                  <a class="dropBtn" href="#"
+                    >Iniciar sesión
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <div class="drop-content">
+                    <a href="RegistroProveedor.html">Proveedor</a>
+                    <a href="registroUsuario.html">Usuarios</a>
+                  </div>
+                </div>
+              </div>
+          </div>      
+    </header>   
+        
+      <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="images/huevo.jpg" alt="" />
+        </div>
+        <h1>Rayo de Luz</h1>
+        <h2>Ingeniero Electrico</h2>
+        <div class="redes">
+          <form>
+            <p class="clasificacion">
+              <input id="radio1" type="radio" name="estrellas" value="5"><!--
+              --><label for="radio1">★</label><!--
+              --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+              --><label for="radio2">★</label><!--
+              --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+              --><label for="radio3">★</label><!--
+              --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+              --><label for="radio4">★</label><!--
+              --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+              --><label for="radio5">★</label>
+            </p>
+          </form>
+        </div>
+      </div>
+      <td>     
+                    
+        
+                <div class="wrap">
+                  <ul class="tabs">
+                    <li><a href="#tab1"><span class=""></span><span class="tab-text">Sevicio</span></a></li>
+                    <li><a href="#tab2"><span class=""></span><span class="tab-text">Contacto</span></a></li>
+                    <li><a href="#tab3"><span class=""></span><span class="tab-text">Presupuesto</span></a></li>
+                    <li><a href="#tab4"><span class=""></span><span class="tab-text">Galería</span></a></li>
+                    <li><a href="#tab5"><span class=""></span><span class="tab-text">Calificación</span></a></li>                 
+                  
+                  </ul>
+              
+                  <div class="secciones">
+                    <article id="tab1">                      
+                         <!-- SECCION SOBRE MI PERFIL PROVEEDOR-->
+                         <h1 >Detalles</h1><br>
+                         <p class="sobremiPerfil">
+                          Hola, soy Rayo de Luz, me encargo de arreglar desde enchufes hasta instalaciones de centros de carga, paneles eléctricos industriales, líneas de alta tensión, etc. El trabajo del electricista no se limita a trabajar en viviendas o edificios, con el crecimiento de la industria los electricistas se forman y capacitan para realizar trabajos como el de reparación y mantenimiento preventivo de todo tipo motores eléctricos monofásicos y trifásicos, contactores, limitadores eléctricos, arrancadores suaves (soft start)
+                        </p>
+                    </article>
+                    <article id="tab2">
+                      <h1>Datos Personales</h1><br>
+                      <section id="sobremiPerfil" class="sobremiPerfil">
+                        <div class="contenido-seccionPerfil">        
+                  
+                          <div class="fila">
+                            <!-- datos personales -->
+                            <div class="col">                              
+                              <ul>                                       
+                                <li>
+                                  <strong>Celular</strong>
+                                  +54 9 379 4591718
+                                </li>
+                                <li>
+                                  <strong>Email</strong>
+                                  saltara16@gmail.com
+                                </li>                                                                 
+                                <li>                                 
+                                <li>
+                                  <strong>Cargo</strong>
+                                  <span>Electricista</span> 
+                                  <span>Iluminación</span>                
+                                </li>
+                               </ul>           
+                      </section>
+                    </article>
+                    <article id="tab3">
+                      <form  action="consulta">
+                        <h1>Formulario de presupuesto </h1>
+                        <input type="text" placeholder="Ingrese su nombre y apellido">                       
+                        <input type="email" placeholder="Ingrese su Correo">
+                        <input type="password" placeholder="Ingrese su contraseña">
+                        <textarea class="formulario__login" id="exampleFormControlTextarea3" rows="4" placeholder="Deja tu consulta"></textarea> <br>
+                        <p class="acuerdo">Estoy de acuerdo con terminos y condiciones</p>
+                        <button>Enviar</button>
+                        <!--<p class="link"><a href="index2.html">¿Ya tienes cuenta?</a></p>-->
+                     </form>                      
+                    </article>                       
+                    <article id="tab4">
+                      <form  action="consulta">
+                        <h1>Galería de trabajo </h1>               
+                        <section id="portfolio" class="portfolio">
+                          <div class="contenido-seccion">
+                            <h2>Galeria de trabajos:</h2>
+                            <div class="galeria">
+                              <div class="proyecto">
+                                <img src="images/gasista.jpg" alt="" />
+                                <div class="overlay">
+                                  <h3>Ingeniero Eléctrico </h3>
+                                  <p>Iluminación.</p>
+                                </div>
+                              </div>
+                            </div> 
+                            
+                          </section> 
+                        <!--<button>Cragar Fotografía</button>-->
+                        <!--<p class="link"><a href="index2.html">¿Ya tienes cuenta?</a></p>-->
+                     </form>                                                    
+                    </article> 
+                    <article classe="consulta" id="tab5">
+                      <from> 
+                        <p class="clasificacion">
+                          <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                          --><label for="radio1">★</label><!--
+                          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                          --><label for="radio2">★</label><!--
+                          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                          --><label for="radio3">★</label><!--
+                          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                          --><label for="radio4">★</label><!--
+                          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                          --><label for="radio5">★</label>
+                        </p>
+                      </form>
+                        <h1 class="deja__comentario">Deja tu comentario aquí</h1>
+                        <div class="formulario__login">                                                
+                          <textarea class="formulario__login" id="exampleFormControlTextarea2" rows="4" placeholder="Cuentanos como fue tu experiencia"></textarea>
+                        </div>
+                        <form>
+                      </article>                                
+                  </div>
+                </div> 
+      </td>      
+    </section> 
+   
+    <section class="titulo">
+      <div class="titulo">
+        <p >
+          Reseñas de clientes:
+        </p>
+      </div>
+    </section> 
+
+    <section class="testimony">
+      <div class="testimony__container container">
+        <img
+          src="./images/leftarrow.svg"
+          class="testimony__arrow"
+          id="before"
+        />
+
+        
+        <section class="testimony__body testimony__body--show" data-id="1">
+          
+          <div class="testimony__texts">
+            
+            
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+             <div id="testimonios_titulos"> Jamón Pera, </div>
+              <span class="testimony__course">Bueno</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, asperiores eaque totam nulla repudiandae quasi, deserunt
+              culpa exercitationem blanditiis laborum veniam laboriosam saepe
+              reiciendis dolorem. Cum, ratione voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Marina.png" class="testimony__img" />
+          </figure>
+        </section>
+
+        <section class="testimony__body" data-id="2">
+          <div class="testimony__texts">
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+              <div id="testimonios_titulos">Roxana la Flor, </div>
+              <span class="testimony__course">Muy eficiente</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, asperiores eaque laborum veniam laboriosam saepe
+              reiciendis dolorem. Cum, ratione voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Marina.png" class="testimony__img" />
+          </figure>
+        </section>
+
+        <section class="testimony__body" data-id="3">
+          <div class="testimony__texts">
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+              <div id="testimonios_titulos">Agua Transparente,</div>
+              <span class="testimony__course">Pudo ser mejor</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione
+              voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Marina.png" class="testimony__img" />
+          </figure>
+        </section>
+
+        <section class="testimony__body" data-id="4">
+          <div class="testimony__texts">
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+              <div id="testimonios_titulos">Verde Esperanza,</div>
+              <span class="testimony__course">Excelente atención</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione
+              voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="img/electricista.jpg" class="testimony__img" />
+          </figure>         
+        </section>
+        <img
+        src="./images/rightarrow.svg"
+        class="testimony__arrow"
+        id="next"
+       />
+    </div>
+  </section>
+    
+    
+   
+
+     <footer> 
+      <section id="contacto" class="footer__copy container">
+        <div class="footer__social">
+          <a href="#" class="footer__icons"
+            ><img src="./images/facebook.svg" class="footer__img"
+          /></a>
+          <a href="#" class="footer__icons"
+            ><img src="./images/twitter.svg" class="footer__img"
+          /></a>
+          <a href="#" class="footer__icons"
+            ><img src="./images/youtube.svg" class="footer__img"
+          /></a>
+        </div>
+
+        <h3 class="footer__copyright">
+          Derechos reservados &copy; Grupo B
+        </h3>
+      </section>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
