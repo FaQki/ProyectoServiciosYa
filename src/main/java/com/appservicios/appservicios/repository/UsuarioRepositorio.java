@@ -20,6 +20,8 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Integer> {
 
     @Query("SELECT u FROM Usuario u WHERE u.dni = :dni")
     public Usuario buscarPorDni(@Param("dni") Integer dni);
-            
+
+    @Query("SELECT u FROM Usuario u WHERE u.email = :email")
+    public Usuario buscarPorEmail(@Param("email") String email);
 
 }

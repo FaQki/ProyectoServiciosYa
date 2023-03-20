@@ -1,7 +1,7 @@
 package com.appservicios.appservicios.entidades;
 
-// @author Claudia
-/**
+
+
 import com.appservicios.appservicios.enums.Rol;
 import java.util.Date;
 import java.util.List;
@@ -20,4 +20,4 @@ public class Cliente extends Usuario{
     }
 
 }
-**/
+
