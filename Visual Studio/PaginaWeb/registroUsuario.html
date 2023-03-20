@@ -1,17 +1,4 @@
-<?php
 
-$servidor= "localhost";
-$usuario= "root";
-$clave= "";
-$baseDeDatos= "formulario";
-
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-if(!$enlace){
-  echo"Error en la conexión con el servidor";
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -145,59 +132,3 @@ if(!$enlace){
 </body>
 </html>
 
-<?php
-if(isset($_POST['registrarse'])){
-
-$id= $_POST["id"];
-$nombre= $_POST["nombre"];
-$domicilio= $_POST["domicilio"];
-$telefono= $_POST["telefono"];
-$correo= $_POST["correo"];
-$contrasenia= $_POST["contrasenia"];
-
-$insertarDatos = "INSERT INTO datos VALUES( '$id',
-                                            '$nombre',
-                                            '$domicilio',
-                                            '$telefono',
-                                            '$correo',
-                                            '$contrasenia', 
-                                            )";
-
-$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
-
-if(!ejecutarInsertar){
-  echo"Error en la linea de sql;
-}
-}
-
-?>
-
-<!--PARA MOSTRAR EN TABLA-->
-<?php
-$consulta = "SELECT * FROM datos";
-$ejecutarConsulta = mysqli_query($enlace, $consulta);
-$verFilas = msqli_num_rows($ejecutarConsulta);
-$fila = msqli_fetch_array($ejecutarConsulta);
-
-if(!$ejecutarConsulta){
-  echo"Error en la consulta";
-}else{
-  if($verFilas>1){
-    echo"<tr><td>Sin registros</td></tr>";
-  }else{
-    for($i=0; $i<=$fila; $i++){
-      echo'
-      <tr>
-        <td>'.$fila[].'</td>
-        <td>'.$fila[].'</td>
-        <td>'.$fila[].'</td>
-        <td>'.$fila[].'</td>
-        <td>'.$fila[].'</td>
-        <td>'.$fila[].'</td>        
-      </tr>     
-      ';
-      $fila = msqli_fetch_array($ejecutarConsulta);
-    }
-  }
-}
-?>
