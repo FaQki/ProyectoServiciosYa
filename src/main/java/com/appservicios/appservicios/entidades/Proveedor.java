@@ -1,7 +1,6 @@
 package com.appservicios.appservicios.entidades;
 
-// @author Claudia
-/**
+
 import com.appservicios.appservicios.enums.Rol;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +18,7 @@ public class Proveedor extends Usuario{
     public Proveedor(Rubro id_Rubro, String portfolio, String foto, int id, String nombre_Usuario, String barrio, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
         super(id, nombre_Usuario, barrio, domicilio, telefono, email, password, rol, fecha_alta, fecha_baja, baja);
         this.id_Rubro = id_Rubro;
-        this.portfolio = portfolio;
+        
         this.foto = foto;
     }
 
@@ -31,14 +30,6 @@ public class Proveedor extends Usuario{
         this.id_Rubro = id_Rubro;
     }
 
-    public String getPortfolio() {
-        return portfolio;
-    }
-
-    public void setPortfolio(String portfolio) {
-        this.portfolio = portfolio;
-    }
-
     public String getFoto() {
         return foto;
     }
@@ -48,4 +39,4 @@ public class Proveedor extends Usuario{
     }
 
 }
-**/
+

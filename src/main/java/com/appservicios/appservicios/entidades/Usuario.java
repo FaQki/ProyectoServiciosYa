@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+ 
 @Entity
 public class Usuario implements Serializable {
 
@@ -131,3 +132,4 @@ public class Usuario implements Serializable {
     }
 
 }
+ 

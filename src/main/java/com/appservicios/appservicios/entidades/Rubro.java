@@ -1,6 +1,6 @@
 package com.appservicios.appservicios.entidades;
 
-// @author Claudia
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

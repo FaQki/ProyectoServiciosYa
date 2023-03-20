@@ -1,5 +1,5 @@
 package com.appservicios.appservicios.entidades;
-/**
+
 // @author Claudia
 
 import com.appservicios.appservicios.enums.Rol;
@@ -17,4 +17,4 @@ public class Administrador extends Usuario {
     }
 
 }
-**/
+

@@ -574,13 +574,13 @@ footer .arriba {
   font-size: 20px;
   padding: 30px 0 30px;
   cursor: pointer;
-  color: var(--color-title);
+  color: #fff;
   justify-content: space-between;
 }
 
 .questions__arrow {
   border-radius: 50%;
-  background-color: var(--color-title);
+  background-color: #fff;
   width: 25px;
   height: 25px;
   display: flex;
