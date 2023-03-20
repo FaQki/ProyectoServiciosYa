@@ -5,10 +5,11 @@
  */
 package com.appservicios.appservicios.controllers;
 
+import com.appservicios.appservicios.excepciones.Miexcepcion;
 import com.appservicios.appservicios.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,28 +28,31 @@ public class UsuarioControlador {
 
     @GetMapping("/registrar")
     public String registar() {
-        return "registro_usuario.html";
+        return "registroUsuario.html";
     }
 
     @PostMapping("/registro")
     public String registro(
+            @RequestParam("dni") Integer dni,
             @RequestParam("nombre") String nombre,
-            @RequestParam("barrio") String barrio,
             @RequestParam("domicilio") String domicilio,
             @RequestParam("telefono") String telefono,
             @RequestParam("email") String email,
-            @RequestParam("contrasenia") String contrasenia,
-            Model modelo) {
-        
-        System.out.println(nombre);
+            @RequestParam("password") String password,
+            ModelMap modelo) {
 
-        modelo.addAttribute("nombre", nombre);
-        modelo.addAttribute("barrio", barrio);
-        modelo.addAttribute("telefono", telefono);
-        modelo.addAttribute("email", email);
-        modelo.addAttribute("domicilio", domicilio);
-        modelo.addAttribute("contrasenia", contrasenia);
-       
+        try {
+
+            usuarioService.crearUsuario(dni, nombre, domicilio, telefono, email, password, password);
+            
+            
+            modelo.put("exito", "El usuario fue creado correctamente");
+
+        } catch (Miexcepcion e) {
+            
+            modelo.put("error", e.getMessage());
+        }
+
         return "index.html";
 
     }

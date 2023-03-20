@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,7 +15,8 @@
    
   <header class="hero">      
     <div class="navbar">  
-      <div><h2 class="nav__logo">ChacrasApp</h2></div>                
+      <div><h2 class="nav__logo"><img src="images/Logo1.png" class="image"
+        /></h2></div>                
       <div class="nav-header">
                   
           <!-- responsive navbar toggle button -->
@@ -73,22 +74,33 @@
                         <h2>Iniciar Sesión</h2>
                         <input type="text" placeholder="Correo Electronico"  name="correo">
                         <input type="password" placeholder="Contraseña" name="contrasenia">
-                        <button>Entrar</button>
+
+                        <div>
+                          <button>REntrar</button>
+                          <!--<input type="submit" name="registrarse" value="Registrarse">-->
+                         </div>                        
                     </form>
 
                     <!--Register-->
-                    <!-- esto va en el form para conectar con php action="php/registro_usuario_be.php"-->
-                    <form  method="POST" action="perfilUsuario.html" class="formulario__register">
+                    
+                    <form  method="POST" th:action="@{/registro}" class="formulario__register">
                         <h2>Regístrate</h2>
-                        <input type="text" placeholder="DNI" name="id">
+                        <input type="text" placeholder="DNI" name="dni" th:value="${dni}">
                         <input type="text" placeholder="Nombre y Apellido completo" name="usuario">                         
                         <input type="text" placeholder="Domicilio" name="domicilio"> 
                         <input type="text" placeholder="Telefono" name="telefono">                       
                         <input type="text" placeholder="Correo Electronico" name="correo">                                               
-                        <input type="password" placeholder="Contraseña" name="contrasenia"><br> 
+                        <input type="password" placeholder="Contraseña" name="password"><br>
+                        <input type="password" placeholder="Repetir Contraseña"><br>  
                         <br><p>Estoy de acuerdo con los <a href="#">Terminos y Condiciones.</a></p> 
                         <input type="checkbox" id="cbox1" value="first_checkbox" name="check">                          
-                        <button>Regístrarse</button>
+                       
+                       <div>
+                        <button type="submit" class="btn btn-primary mt-3 botones">Regístrarse</button>
+                        <!--<input type="submit" name="registrarse" value="Registrarse">-->
+                       </div>
+                       
+
                     </form>
                 </div>
             </div>           
@@ -117,3 +129,60 @@
         <script src="js/script.js"></script>
 </body>
 </html>
+
+<?php
+if(isset($_POST['registrarse'])){
+
+$id= $_POST["id"];
+$nombre= $_POST["nombre"];
+$domicilio= $_POST["domicilio"];
+$telefono= $_POST["telefono"];
+$correo= $_POST["correo"];
+$contrasenia= $_POST["contrasenia"];
+
+$insertarDatos = "INSERT INTO datos VALUES( '$id',
+                                            '$nombre',
+                                            '$domicilio',
+                                            '$telefono',
+                                            '$correo',
+                                            '$contrasenia', 
+                                            )";
+
+$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
+
+if(!ejecutarInsertar){
+  echo"Error en la linea de sql;
+}
+}
+
+?>
+
+<!--PARA MOSTRAR EN TABLA-->
+<?php
+$consulta = "SELECT * FROM datos";
+$ejecutarConsulta = mysqli_query($enlace, $consulta);
+$verFilas = msqli_num_rows($ejecutarConsulta);
+$fila = msqli_fetch_array($ejecutarConsulta);
+
+if(!$ejecutarConsulta){
+  echo"Error en la consulta";
+}else{
+  if($verFilas>1){
+    echo"<tr><td>Sin registros</td></tr>";
+  }else{
+    for($i=0; $i<=$fila; $i++){
+      echo'
+      <tr>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>        
+      </tr>     
+      ';
+      $fila = msqli_fetch_array($ejecutarConsulta);
+    }
+  }
+}
+?>

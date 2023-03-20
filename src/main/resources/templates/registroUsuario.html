@@ -1,20 +1,5 @@
-<?php
-
-$servidor= "localhost";
-$usuario= "root";
-$clave= "";
-$baseDeDatos= "formulario";
-
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-if(!$enlace){
-  echo"Error en la conexión con el servidor";
-}
-
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -97,21 +82,21 @@ if(!$enlace){
                     </form>
 
                     <!--Register-->
-                    <!-- esto va en el form para conectar con php action="php/registro_usuario_be.php"-->
-                    <form  method="POST" action="perfilUsuario.html" class="formulario__register">
+                    
+                    <form  method="POST" th:action="@{/registro}" class="formulario__register">
                         <h2>Regístrate</h2>
-                        <input type="text" placeholder="DNI" name="id">
+                        <input type="text" placeholder="DNI" name="dni" th:value="${dni}">
                         <input type="text" placeholder="Nombre y Apellido completo" name="usuario">                         
                         <input type="text" placeholder="Domicilio" name="domicilio"> 
                         <input type="text" placeholder="Telefono" name="telefono">                       
                         <input type="text" placeholder="Correo Electronico" name="correo">                                               
-                        <input type="password" placeholder="Contraseña" name="contrasenia"><br>
-                        <input type="password" placeholder="Repetir Contraseña" name="repetirContrasenia"><br>  
+                        <input type="password" placeholder="Contraseña" name="password"><br>
+                        <input type="password" placeholder="Repetir Contraseña"><br>  
                         <br><p>Estoy de acuerdo con los <a href="#">Terminos y Condiciones.</a></p> 
                         <input type="checkbox" id="cbox1" value="first_checkbox" name="check">                          
                        
                        <div>
-                        <button>Regístrarse</button>
+                        <button type="submit" class="btn btn-primary mt-3 botones">Regístrarse</button>
                         <!--<input type="submit" name="registrarse" value="Registrarse">-->
                        </div>
                        

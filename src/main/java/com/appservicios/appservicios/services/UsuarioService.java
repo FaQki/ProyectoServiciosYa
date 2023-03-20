@@ -35,15 +35,15 @@ public class UsuarioService implements UserDetailsService {
     private UsuarioRepositorio userRepo;
 
     @Transactional
-    public void crearUsuario(Integer dni, String nombre_Usuario, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void crearUsuario(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
-        validar(dni, nombre_Usuario, domicilio, telefono, email, password, password2);
+        validar(dni, nombre, domicilio, telefono, email, password, password2);
 
         Usuario user = new Usuario();
 
         user.setdni(dni);
         user.setPassword(password);
-        user.setNombre_Usuario(nombre_Usuario);
+        user.setNombre(nombre);
         user.setDomicilio(domicilio);
         user.setTelefono(telefono);
         user.setEmail(email);
@@ -63,9 +63,9 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    public void modificarUsuario(Integer dni, String nombre_Usuario, String domicilio, String telefono, String email, String barrio, String password, String password2) throws Miexcepcion {
+    public void modificarUsuario(Integer dni, String nombre, String domicilio, String telefono, String email, String barrio, String password, String password2) throws Miexcepcion {
 
-        validar(dni, nombre_Usuario, domicilio, telefono, email, password, password2);
+        validar(dni, nombre, domicilio, telefono, email, password, password2);
 
         Optional<Usuario> resp = userRepo.findById(dni);
 
@@ -73,7 +73,7 @@ public class UsuarioService implements UserDetailsService {
 
             Usuario user = resp.get();
             user.setdni(dni);
-            user.setNombre_Usuario(nombre_Usuario);
+            user.setNombre(nombre);
             user.setDomicilio(domicilio);
             user.setTelefono(telefono);
             user.setEmail(email);
@@ -83,13 +83,13 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    private void validar(Integer dni, String nombre_Usuario, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    private void validar(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
         if (dni == null) {
             throw new Miexcepcion("El dni no puede ser nulo");
         }
 
-        if (nombre_Usuario.isEmpty() || nombre_Usuario == null) {
+        if (nombre.isEmpty() || nombre == null) {
             throw new Miexcepcion("El nombre no puede ser nulo");
         }
 
@@ -131,4 +131,6 @@ public class UsuarioService implements UserDetailsService {
         }
 
     }
+
+ 
 }

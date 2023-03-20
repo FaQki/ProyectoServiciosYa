@@ -16,7 +16,7 @@ public class Usuario implements Serializable {
 
     @Id
     private Integer dni; //Clave identificatoria
-    private String nombre_Usuario; //Apellido y nombre del Usuario
+    private String nombre; //Apellido y nombre del Usuario
     private String domicilio; //Domicilio exacto
     private String telefono;
     private String email;
@@ -38,7 +38,7 @@ public class Usuario implements Serializable {
 
     public Usuario(Integer dni, String nombre_Usuario, String barrio, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
         this.dni = dni;
-        this.nombre_Usuario = nombre_Usuario;
+        this.nombre = nombre_Usuario;
         this.domicilio = domicilio;
         this.telefono = telefono;
         this.email = email;
@@ -57,12 +57,12 @@ public class Usuario implements Serializable {
         this.dni = dni;
     }
 
-    public String getNombre_Usuario() {
-        return nombre_Usuario;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombre_Usuario(String nombre_Usuario) {
-        this.nombre_Usuario = nombre_Usuario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDomicilio() {
