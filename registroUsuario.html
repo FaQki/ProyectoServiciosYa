@@ -1,4 +1,17 @@
+<?php
 
+$servidor= "localhost";
+$usuario= "root";
+$clave= "";
+$baseDeDatos= "formulario";
+
+$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+
+if(!$enlace){
+  echo"Error en la conexión con el servidor";
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +49,9 @@
             <a href="index.html#sobremi">Nosotros</a>
             <!-- Dropdown menu -->
             <div class="dropdown">
-              <a class="dropBtn" href="#"
+              <a class="#" href="index.html#Acerca"
                 >Servicios
-                <i class="fas fa-angle-down"></i>
+                <!--<i class="fas fa-angle-down"></i>-->
               </a>
               <!--<div class="drop-content">
                 <a href="#">Electricista</a>
@@ -46,7 +59,20 @@
                 <a href="#">Plomería</a>
               </div>-->
             </div>
-            <a href="#contacto">Contacto</a>            
+            <a href="#contacto">Contacto</a>
+            <a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
+                <a href="registrosVentanaAlert.html">Regístrate</a>
+                <!--<div class="dropdown">
+                  <a class="dropBtn" href="#"
+                    >Iniciar sesión
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <div class="drop-content">
+                    <a href="RegistroProveedor.html">Proveedor</a>
+                    <a href="registroUsuario.html">Usuarios</a>
+                  </div>
+                </div>
+              </div>-->            
           </div>
       </div>      
 </header> 
@@ -78,7 +104,7 @@
                         <input type="password" placeholder="Contraseña" name="contrasenia">
 
                         <div>
-                          <button>REntrar</button>
+                          <button>Entrar</button>
                           <!--<input type="submit" name="registrarse" value="Registrarse">-->
                          </div>                        
                     </form>
@@ -132,3 +158,59 @@
 </body>
 </html>
 
+<?php
+if(isset($_POST['registrarse'])){
+
+$id= $_POST["id"];
+$nombre= $_POST["nombre"];
+$domicilio= $_POST["domicilio"];
+$telefono= $_POST["telefono"];
+$correo= $_POST["correo"];
+$contrasenia= $_POST["contrasenia"];
+
+$insertarDatos = "INSERT INTO datos VALUES( '$id',
+                                            '$nombre',
+                                            '$domicilio',
+                                            '$telefono',
+                                            '$correo',
+                                            '$contrasenia', 
+                                            )";
+
+$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
+
+if(!ejecutarInsertar){
+  echo"Error en la linea de sql;
+}
+}
+
+?>
+
+<!--PARA MOSTRAR EN TABLA-->
+<?php
+$consulta = "SELECT * FROM datos";
+$ejecutarConsulta = mysqli_query($enlace, $consulta);
+$verFilas = msqli_num_rows($ejecutarConsulta);
+$fila = msqli_fetch_array($ejecutarConsulta);
+
+if(!$ejecutarConsulta){
+  echo"Error en la consulta";
+}else{
+  if($verFilas>1){
+    echo"<tr><td>Sin registros</td></tr>";
+  }else{
+    for($i=0; $i<=$fila; $i++){
+      echo'
+      <tr>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>
+        <td>'.$fila[].'</td>        
+      </tr>     
+      ';
+      $fila = msqli_fetch_array($ejecutarConsulta);
+    }
+  }
+}
+?>

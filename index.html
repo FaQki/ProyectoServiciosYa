@@ -1,4 +1,16 @@
+<!--
+<?php
+ 
+ session_start();
+ if(!isset($_SESSION['usuario'])){ 
+   header("location: bienvenida.php"); 
+  
+ }
 
+
+
+?>
+-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -47,18 +59,20 @@
                     <a href="#">Gasista</a>
                     <a href="#">Plomería</a>
                   </div>-->
-                </div>
+                </div>                
                 <a href="#contacto">Contacto</a>
-                <div class="dropdown">
+                <a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
+                <a href="registrosVentanaAlert.html">Regístrate</a>
+                <!--<div class="dropdown">
                   <a id="iniciarSesion" class="dropBtn" href="iniciarSesion.html">Iniciar Sesión
                     <i class="fas fa-angle-down"></i>
-                  </a>                
+                  </a>              
                   
-                  <div class="drop-content">
+                   <div class="drop-content">
                     <a href="RegistroProveedor.html">Proveedor</a>
                     <a href="registroUsuario.html">Usuarios</a>
                   </div>
-                </div>
+                </div>-->
               </div>
           </div>      
     </header>  
@@ -238,7 +252,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/slider.js"></script>
     <script src="js/questions.js"></script>
-    
    
   </body>
 </html>
