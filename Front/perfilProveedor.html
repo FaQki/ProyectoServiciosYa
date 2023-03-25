@@ -27,31 +27,30 @@
                 <a href="index.html">Inicio</a>
                 <a href="index.html#sobremi">Nosotros</a>
                 <!-- Dropdown menu -->
-                <div class="dropdown">
-                  <a class="#" href="Rubros.html"
-                    >Servicios
-                    <!--<i class="fas fa-angle-down"></i>-->
-                  </a>
-                 <!--<div class="drop-content">
-                    <a href="#">Electricista</a>
-                    <a href="#">Gasista</a>
-                    <a href="#">Plomería</a>
-                  </div>
-                </div>-->
-                <a href="index.html#contacto">Contacto</a>
-                <a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
-                <a href="registrosVentanaAlert.html">Regístrate</a>
-                <!--<div class="dropdown">
-                  <a class="dropBtn" href="#"
-                    >Iniciar sesión
+                 <!--<div class="dropdown">-->
+                  <a class="#" href="Rubros.html">Servicios
                     <i class="fas fa-angle-down"></i>
                   </a>
+                  <!--<div class="drop-content">
+                    <a href="#">Mensajeria</a>
+                    <a href="#">Reseñas</a>                    
+                  </div>
+                </div>-->
+                <a href="#contacto">Contacto</a>
+               <!-- <a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
+                <a href="registrosVentanaAlert.html">Regístrate</a>-->
+                <!--<a href="perfilUsuario.html">Mi cuenta</a>-->
+                <div class="dropdown">
+                  <a class="dropBtn" href="#"
+                    >Mi cuenta
+                    <!--<i class="fas fa-angle-down"></i>-->
+                  </a>
                   <div class="drop-content">
-                    <a href="RegistroProveedor.html">Proveedor</a>
-                    <a href="registroUsuario.html">Usuarios</a>
+                    <a href="#mensajeria">Mensajeria</a>
+                    <a href="#resenia">Reseñas</a>
                   </div>
                 </div>
-              </div>-->
+              </div>
           </div>      
     </header>   
     <body style="background-color: #1e3c72;"></body>
@@ -97,25 +96,28 @@
                   <div class="secciones">
                     <article id="tab1">                      
                          <!-- SECCION SOBRE MI PERFIL PROVEEDOR-->
-                         <h1 >Detalles</h1><br>
+                         <h1 >Especialización</h1><br>
                          <p class="sobremiPerfil">
+                          <!--<form action="action=">
+                            <textarea class="formulario__login" id="exampleFormControlTextarea3" rows="4" placeholder="Escribe sobre lo que haces"></textarea> <br>                        
+                        <button>Enviar</button>
+                          </form>-->
                           Hola, soy Rayo de Luz, me encargo de arreglar desde enchufes hasta instalaciones de centros de carga, paneles eléctricos industriales, líneas de alta tensión, etc. El trabajo del electricista no se limita a trabajar en viviendas o edificios, con el crecimiento de la industria los electricistas se forman y capacitan para realizar trabajos como el de reparación y mantenimiento preventivo de todo tipo motores eléctricos monofásicos y trifásicos, contactores, limitadores eléctricos, arrancadores suaves (soft start)
                         </p>
                     </article>
                     <article id="tab2">
                       <h1>Datos Personales</h1><br>
                       <section id="sobremiPerfil" class="sobremiPerfil">
-                        <div class="contenido-seccionPerfil">        
+                        <div class="contenido-seccionPerfil">      
                   
-                          <div class="fila">
-                            <!-- datos personales -->
+                          <div class="fila">                          
                             <div class="col">                              
                               <ul>                                       
-                                <li>
-                                  <strong>Celular</strong>
+                                <li >
+                                  <strong >Telefono</strong>
                                   +54 9 379 4591718
                                 </li>
-                                <li>
+                                <li >
                                   <strong>Email</strong>
                                   saltara16@gmail.com
                                 </li>                                                                 
@@ -128,33 +130,56 @@
                       <form  action="consulta">
                         <h1>Formulario de Presupuesto </h1>
                         <input type="text" placeholder="Ingrese su nombre y apellido">                       
-                        <input type="email" placeholder="Ingrese su Correo">
-                        <input type="password" placeholder="Ingrese su contraseña">
-                        <textarea class="formulario__login" id="exampleFormControlTextarea3" rows="4" placeholder="Deja tu consulta"></textarea> <br>
-                        <p class="acuerdo">Estoy de acuerdo con terminos y condiciones</p>
+                        <input type="email" placeholder="Ingrese su Correo">                       
+                        <textarea class="formulario__login" id="exampleFormControlTextarea3" rows="4" placeholder="Deja tu consulta"></textarea> <br>                        
                         <button>Enviar</button>
-                       <!-- <p class="link"><a href="index2.html">¿Ya tienes cuenta?</a></p>-->
+                       
                      </form>                      
                     </article>                      
                     <article id="tab4">
                       <form  action="consulta">
-                        <h1>Galería de trabajo </h1>               
-                        <section id="portfolio" class="portfolio">
-                          <div class="contenido-seccion">
-                            <h2>Galeria de trabajos:</h2>
-                            <div class="galeria">
-                              <div class="proyecto">
-                                <img src="images/electricista.jpg" alt="" />
-                                <div class="overlay">
-                                  <h3>Ingeniero Eléctrico </h3>
-                                  <p>Iluminación.</p>
-                                </div>
-                              </div>
-                            </div> 
-                            
-                          </section> 
-                        <button>Cragar Fotografía</button>
-                        <!--<p class="link"><a href="index2.html">¿Ya tienes cuenta?</a></p>-->
+                        <h1>Galería de trabajo </h1> 
+                        
+                             
+                          <!--<section class="testimony1" id="Acerca">
+                            <div class="testimony__container container1">
+                              <img
+                                src="./images/leftarrow1.png"
+                                class="testimony__arrow1"
+                                id="before1"/>
+                  
+                              <section class="testimony__body1 testimony__body--show1" data-id="1">                          
+                  
+                                <figure class="testimony__picture1">
+                                  <img src="./images/electricista.jpg" class="testimony__img1" />
+                                </figure>
+                              </section>--> 
+                              
+                              
+                                <div class="slide-contenedor">
+                                  <div class="miSlider fade">
+                                      <img src="images/electricista.jpg" alt="">
+                                  </div>
+                                  <div class="miSlider fade">
+                                      <img src="images/fondoPlomeria.jpg" alt="">
+                                  </div>
+                                  <div class="miSlider fade">
+                                      <img src="images/fondoPlomeria.jpg" alt="">
+                                  </div>
+                                  <div class="direcciones">
+                                      <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                                      <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+                                  </div>
+                                  <div class="barras">
+                                      <span class="barra active" onclick="posicionSlide(1)"></span>
+                                      <span class="barra" onclick="posicionSlide(2)"></span>
+                                      <span class="barra" onclick="posicionSlide(3)"></span>
+                                  </div>
+                              </div>                 
+                             
+                              <div class="file-select" id="src-file1">                                 
+                               <input type="file"   for="exampleFormControlSelect1" aria-label="Archivo"  name="src-file1">                                             
+                              </div>                      
                      </form>
                     </article>                                                   
                    
@@ -178,12 +203,186 @@
                           <div class="formulario__login">                                                
                             <textarea class="formulario__login" id="exampleFormControlTextarea2" rows="4" placeholder="Cuentanos como fue tu experiencia"></textarea>
                           </div>
+                          <button>Enviar</button>
                           <form>
                         </article> 
                   </div>
                 </div> 
       </td>      
     </section> 
+
+    <!--==========================
+=            html            =
+===========================-->
+<section class="titulo" id="resenia">
+  <div class="titulo">
+    <p >
+      Chat
+    </p>
+  </div>
+</section> 
+<section class="mensaje-cuerpo">
+
+
+<section class="body-chat" id="mensajeria">
+<div class="seccion-titulo">
+  <h3>
+      <i class="fas fa-comments"></i>
+      Mensajeria
+  </h3>
+</div>
+<div class="seccion-usuarios">
+  <div class="seccion-buscar">
+      <div class="input-buscar">
+          <input type="search" placeholder="Buscar usuario">
+          <i class="fas fa-search"></i>
+      </div>
+  </div>
+  <div class="seccion-lista-usuarios">
+      <div class="usuario">
+          <div class="avatar">
+              <img src="ruta_img" alt="img">
+              <span class="estado-usuario enlinea"></span>
+          </div>
+          <div class="cuerpo">
+              <span> Nombre apellido</span>
+              <span>detalles de mensaje</span>
+          </div>
+          <span class="notificacion">
+              3
+          </span>
+      </div>
+      <div class="usuario">
+          <div class="avatar">
+              <img src="ruta_img" alt="img">
+              <span class="estado-usuario ocupado"></span>
+          </div>
+          <div class="cuerpo">
+              <span> Nombre apellido</span>
+              <span>detalles de mensaje</span>
+          </div>
+          <span class="notificacion">
+              1
+          </span>
+      </div>
+      <div class="usuario">
+          <div class="avatar">
+              <img src="ruta_img" alt="img">
+              <span class="estado-usuario desconectado"></span>
+          </div>
+          <div class="cuerpo">
+              <span> Nombre apellido</span>
+              <span>detalles de mensaje</span>
+          </div>
+          <span class="notificacion">
+              1
+          </span>
+      </div>
+  </div>
+</div>
+<div class="seccion-chat">
+  <div class="usuario-seleccionado">
+      <div class="avatar">
+          <img src="ruta_img" alt="img">
+      </div>
+      <div class="cuerpo">
+          <span>Nombre de usuario</span>
+          <span>Activo - Escribiendo...</span>
+      </div>
+      <div class="opciones">
+          <ul>
+              <li>
+                  <button type="button"><i class="fas fa-video"></i></button>
+              </li>
+              <li>
+                  <button type="button"><i class="fas fa-phone-alt"></i></button>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="panel-chat">
+      <div class="mensaje">
+          <div class="avatar">
+              <img src="ruta_img" alt="img">
+          </div>
+          <div class="cuerpo">
+              <!-- <img src="http://localhost/multimedia/png/user-foto-3.png" alt=""> -->
+              <div class="texto">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Dolor eligendi voluptatum dolore voluptas iure.
+                  <span class="tiempo">
+                      <i class="far fa-clock"></i>
+                      Hace 5 min
+                  </span>
+              </div>
+              <ul class="opciones-msj">
+                  <li>
+                      <button type="button">
+                          <i class="fas fa-times"></i>
+                      </button>
+                  </li>
+                  <li>
+                      <button type="button">
+                          <i class="fas fa-share-square"></i>
+                      </button>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- derecha -->
+      <div class="mensaje left">
+          <div class="cuerpo">
+              <!-- <img src="http://localhost/multimedia/png/user-foto-3.png" alt=""> -->
+              <div class="texto">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Dolor eligendi voluptatum dolore voluptas iure.
+                  <span class="tiempo">
+                      <i class="far fa-clock"></i>
+                      Hace 6 min
+                  </span>
+              </div>
+              <ul class="opciones-msj">
+                  <li>
+                      <button type="button">
+                          <i class="fas fa-times"></i>
+                      </button>
+                  </li>
+                  <li>
+                      <button type="button">
+                          <i class="fas fa-share-square"></i>
+                      </button>
+                  </li>
+              </ul>
+          </div>
+          <div class="avatar">
+              <img src="ruta_img" alt="img">
+          </div>
+      </div>
+  </div>
+  <div class="panel-escritura">
+      <form class="textarea">
+          <div class="opcines">
+              <button type="button">
+                  <i class="fas fa-file"></i>
+                  <label for="file"></label>
+                  <input type="file" id="file">
+              </button>
+              <button type="button">
+                  <i class="far fa-image"></i>
+                  <label for="img"></label>
+                  <input type="file" id="img">
+              </button>
+          </div>
+          <textarea placeholder="Escribir mensaje"></textarea>
+          <button type="button" class="enviar">
+              <i class="fas fa-paper-plane"></i>
+          </button>
+      </form>
+  </div>
+</div>
+</section>
+<!--====  End of html  ====-->
+
+</section>
+
    
     <section class="titulo">
       <div class="titulo">
@@ -235,7 +434,7 @@
           </div>
 
           <figure class="testimony__picture">
-            <img src="images/Facundo.jpeg" class="testimony__img" />
+            <img src="images/Foto.jpeg" class="testimony__img" />
           </figure>
         </section>
 
@@ -280,28 +479,43 @@
   </section>    
    
         
-
-     <footer> 
-      <section id="contacto" class="footer__copy container">
-        <div class="footer__social">
-          <a href="#" class="footer__icons"
-            ><img src="./images/facebook.svg" class="footer__img"
-          /></a>
-          <a href="#" class="footer__icons"
-            ><img src="./images/twitter.svg" class="footer__img"
-          /></a>
-          <a href="#" class="footer__icons"
-            ><img src="./images/youtube.svg" class="footer__img"
-          /></a>
+  <footer class="pie-pagina" id="contacto">
+    <div class="grupo-1">          
+      <div class="box">
+        <h2>Facundo Angelico <i>(Backend)</i></h2>
+        <div class="red-social">
+          <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
         </div>
-
-        <h3 class="footer__copyright">
-          Derechos reservados &copy; Grupo B
-        </h3>
-      </section>
-    </footer>
+      </div>
+      <div class="box">
+        <h2>Marina A. López <i>(Frontend)</i></h2>
+        <div class="red-social">      
+          
+          <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="box">
+        <h2>Santiago Moran <i>(Frontend)</i></h2>
+        <div class="red-social">
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+         
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small
+        >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
+        Reservados.</small>
+    </div>
+  </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+    <script src=" http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/galeria.js"></script>
   </body>
 </html>
