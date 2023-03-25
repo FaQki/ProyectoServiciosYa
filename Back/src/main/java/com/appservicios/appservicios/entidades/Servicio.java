@@ -1,13 +1,7 @@
 package com.appservicios.appservicios.entidades;
 
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 @Entity 
 public class Servicio {
@@ -26,9 +20,9 @@ public class Servicio {
     private char tipo_Servicio; //0-aceptado, 1-finalizado, 3-cancelado
 
     @ManyToOne
-    private Cliente id_Cliente; //Muchos servicios para un usuario/cliente
-    @ManyToOne
-    private Proveedor id_Prov;  //
+    private Cliente dni; //Muchos servicios para un usuario/cliente
+    @OneToOne
+    private Proveedor dni;  //
     
     private char puntaje_calif; //cantidad de estrellas que se califica
     private String resenia_calif; //Comentario del usuario que califica

@@ -5,11 +5,14 @@ import com.appservicios.appservicios.enums.Rol;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Proveedor extends Usuario{
     
     private String foto; //Link de foto de perfil
+    @OneToOne
+    private Servicio servicio;
     
 
     public Proveedor() {

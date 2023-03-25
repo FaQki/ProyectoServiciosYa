@@ -65,7 +65,7 @@ public class ProveedorService extends UsuarioService{
         if (email.isEmpty() || email == null) {
             throw new Miexcepcion("El email no puede ser nulo");
         }
-        if (password.isEmpty() || password == null || password.length() <= 6) {
+        if (password.isEmpty() || password == null || password.length() >= 6) {
             throw new Miexcepcion("El password no puede ser nulo, y debe ser mayor a 6 digitos");
         }
         if (!password2.equals(password)) {
@@ -83,6 +83,7 @@ public class ProveedorService extends UsuarioService{
         return proveedores;
     }
 
+    @Transactional
     public void modificarProveedor(String foto, Integer dni, String nombre, String domicilio, String telefono, String email, String barrio, String password, String password2) throws Miexcepcion {
 
         validar(foto, dni, nombre, domicilio, telefono, email, password, password2);
@@ -106,6 +107,7 @@ public class ProveedorService extends UsuarioService{
 
     }
 
+    @Transactional
     public void eliminarProveedor(Integer dni)  {
 
         Optional<Proveedor> resp = provRepo.findById(dni);

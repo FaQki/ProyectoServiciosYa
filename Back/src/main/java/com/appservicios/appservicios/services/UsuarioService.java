@@ -51,6 +51,7 @@ public class UsuarioService implements UserDetailsService {
         user.setRol(Rol.USER);
         userRepo.save(user);
 
+
     }
 
     public List<Usuario> listarUsuarios() {
@@ -95,7 +96,7 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    private void validar(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void validar(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
         if (dni == null) {
             throw new Miexcepcion("El dni no puede ser nulo");
