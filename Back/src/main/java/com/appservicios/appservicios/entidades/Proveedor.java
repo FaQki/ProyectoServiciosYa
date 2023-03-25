@@ -8,28 +8,22 @@ import javax.persistence.Entity;
 
 @Entity
 public class Proveedor extends Usuario{
-    private Rubro id_Rubro; //Rubro en el que se desempeña
+    
     private String foto; //Link de foto de perfil
     
 
     public Proveedor() {
     }
 
-    public Proveedor(Rubro id_Rubro, String portfolio, String foto, int id, String nombre_Usuario, String barrio, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
-        super(id, nombre_Usuario, barrio, domicilio, telefono, email, password, rol, fecha_alta, fecha_baja, baja);
-        this.id_Rubro = id_Rubro;
-        
+    public Proveedor(String foto) {
         this.foto = foto;
     }
 
-    public Rubro getId_Rubro() {
-        return id_Rubro;
+    public Proveedor(String foto, Integer dni, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
+        super(dni, nombre, domicilio, telefono, email, password, rol, fecha_alta, fecha_baja, baja);
+        this.foto = foto;
     }
-
-    public void setId_Rubro(Rubro id_Rubro) {
-        this.id_Rubro = id_Rubro;
-    }
-
+    
     public String getFoto() {
         return foto;
     }
@@ -37,6 +31,12 @@ public class Proveedor extends Usuario{
     public void setFoto(String foto) {
         this.foto = foto;
     }
+    
+    
+    
+    
+
+  
 
 }
 

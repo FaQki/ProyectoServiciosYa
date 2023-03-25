@@ -1,4 +1,7 @@
 package com.appservicios.appservicios.services;
 
-public class ClienteService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class ClienteService  {
 }

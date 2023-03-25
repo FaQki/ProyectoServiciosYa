@@ -39,9 +39,9 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Integer dni, String nombre_Usuario, String barrio, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
+    public Usuario(Integer dni, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
         this.dni = dni;
-        this.nombre = nombre_Usuario;
+        this.nombre = nombre;
         this.domicilio = domicilio;
         this.telefono = telefono;
         this.email = email;
@@ -132,7 +132,8 @@ public class Usuario implements Serializable {
         this.baja = baja;
     }
 
- 
+    
+   
 
 }
  

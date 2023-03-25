@@ -15,7 +15,7 @@ public class Servicio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_Servicio;  //Clave de identificación del servicio
     
-    private Rubro id_Rubro; 
+   
     private String descripcion_Servicio; //Descripción del pedido del usuario
     
     @Temporal(TemporalType.DATE)
@@ -27,22 +27,22 @@ public class Servicio {
 
     @ManyToOne
     private Cliente id_Cliente; //Muchos servicios para un usuario/cliente
-
+    @ManyToOne
     private Proveedor id_Prov;  //
+    
     private char puntaje_calif; //cantidad de estrellas que se califica
     private String resenia_calif; //Comentario del usuario que califica
 
     public Servicio() {
     }
 
-    public Servicio(int id_Servicio, Rubro id_Rubro, String descripcion_Servicio, Date fecha_Inicio_Servicio, Date fecha_fin_Servicio, char tipo_Servicio, Proveedor id_Prov, char puntaje_calif, String resenia_calif) {
+    public Servicio(int id_Servicio, String descripcion_Servicio, Date fecha_Inicio_Servicio, Date fecha_fin_Servicio, char tipo_Servicio, Cliente id_Cliente, Proveedor id_Prov, char puntaje_calif, String resenia_calif) {
         this.id_Servicio = id_Servicio;
-        this.id_Rubro = id_Rubro;
         this.descripcion_Servicio = descripcion_Servicio;
         this.fecha_Inicio_Servicio = fecha_Inicio_Servicio;
         this.fecha_fin_Servicio = fecha_fin_Servicio;
         this.tipo_Servicio = tipo_Servicio;
-      // this.id_User = id_User;
+        this.id_Cliente = id_Cliente;
         this.id_Prov = id_Prov;
         this.puntaje_calif = puntaje_calif;
         this.resenia_calif = resenia_calif;
@@ -54,14 +54,6 @@ public class Servicio {
 
     public void setId_Servicio(int id_Servicio) {
         this.id_Servicio = id_Servicio;
-    }
-
-    public Rubro getId_Rubro() {
-        return id_Rubro;
-    }
-
-    public void setId_Rubro(Rubro id_Rubro) {
-        this.id_Rubro = id_Rubro;
     }
 
     public String getDescripcion_Servicio() {
@@ -95,16 +87,15 @@ public class Servicio {
     public void setTipo_Servicio(char tipo_Servicio) {
         this.tipo_Servicio = tipo_Servicio;
     }
-/**
-    public User getId_User() {
-        return id_User;
+
+    public Cliente getId_Cliente() {
+        return id_Cliente;
     }
 
-    public void setId_User(User id_User) {
-        this.id_User = id_User;
+    public void setId_Cliente(Cliente id_Cliente) {
+        this.id_Cliente = id_Cliente;
     }
-    
-**/
+
     public Proveedor getId_Prov() {
         return id_Prov;
     }
@@ -128,7 +119,7 @@ public class Servicio {
     public void setResenia_calif(String resenia_calif) {
         this.resenia_calif = resenia_calif;
     }
-    
+
     
     
     

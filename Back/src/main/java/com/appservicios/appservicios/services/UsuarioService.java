@@ -63,7 +63,7 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    public void modificarUsuario(Integer dni, String nombre, String domicilio, String telefono, String email, String barrio, String password, String password2) throws Miexcepcion {
+    public void modificarUsuario(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
         validar(dni, nombre, domicilio, telefono, email, password, password2);
 
@@ -78,6 +78,18 @@ public class UsuarioService implements UserDetailsService {
             user.setTelefono(telefono);
             user.setEmail(email);
             user.setFecha_alta(new Date());
+            
+
+        }
+
+    }
+    
+    public void eliminarProveedor(Integer dni)  {
+
+        Optional<Usuario> resp = userRepo.findById(dni);
+        if (resp.isPresent()) {
+            Usuario user = resp.get();
+            userRepo.delete(user);
 
         }
 
