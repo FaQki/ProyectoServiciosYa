@@ -59,7 +59,7 @@
   grid-auto-flow: column;
   gap: 1em;
   align-items: center;
-  padding: 30px 40px;
+  padding: 5px 20px;
 }
 
 .navbar .nav-header {

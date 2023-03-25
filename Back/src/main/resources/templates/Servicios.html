@@ -10,7 +10,8 @@
   <body>
     <header class="hero">      
         <div class="navbar">  
-          <div><h2 class="nav__logo">ChacrasApp</h2></div>                
+          <div><h2 class="nav__logo"><img src="images/Logo1.png" class="image"
+            /></h2></div>                
           <div class="nav-header">
                       
               <!-- responsive navbar toggle button -->
@@ -25,7 +26,7 @@
               <!-- Navbar items -->          
               <div class="nav-links">            
                 <a href="index.html">Inicio</a>
-                <a href="#sobremi">Nosotros</a>
+                <a href="index.html#sobremi">Nosotros</a>
                 <!-- Dropdown menu -->
                 <div class="dropdown">
                   <a class="dropBtn" href="#"
@@ -38,10 +39,13 @@
                     <a href="#">Plomería</a>
                   </div>-->
                 </div>
-                <a href="#contacto">Contacto</a>
-                <div class="dropdown">
+                <a href="index.html#contacto">Contacto</a>
+                <!--<a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
+                <a href="registrosVentanaAlert.html">Regístrate</a>-->
+                <a href="perfilUsuario.html">Mi cuenta</a>
+                <!--<div class="dropdown">
                   <a class="dropBtn" href="#"
-                    >Regístrate
+                    >Iniciar sesión
                     <i class="fas fa-angle-down"></i>
                   </a>
                   <div class="drop-content">
@@ -49,6 +53,7 @@
                     <a href="registroUsuario.html">Usuarios</a>
                   </div>
                 </div>
+              </div>-->
               </div>
           </div>      
     </header>  
@@ -79,29 +84,30 @@
           </form>
           <div class="categorias" id="categorias">
             <a href="#" class="activo">Todos</a>
-            <a href="#">Electricista</a>
-            <a href="#">Gasista</a>
-            <a href="#">Plomero</a>
+            <a href="#Electricista" >Electricista</a>
+            <a href="#Gasista">Gasista</a>
+            <a href="#plomero">Plomero</a>
             
           </div>
-          <div class="galeria">
-            <div class="proyecto">
-              <img src="images/electricista.jpg" alt="" />
-              <div class="overlay">
+          
 
                 <!--eLECTRICISTA-->
+                <div class="galeria">
+                  <div class="proyecto" id="Electricista">                    
+                    <img src="images/electricista.jpg" alt="" />
+                    <div class="overlay">
                 <h3>Ingeniero Eléctrico </h3>
                 <p>Iluminación.</p>
               </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" id="Electricista">              
               <img src="images/electricista.jpg" alt="" />
               <div class="overlay">
                 <h3>Ingeniero Eléctrico </h3>
                 <p>Ensamblar e instalar cableado eléctrico.</p>
               </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" id="Electricista">              
               <img src="images/electricista.jpg" alt="" />
               <div class="overlay">
                 <h3>Ingeniero Eléctrico </h3>
@@ -109,105 +115,89 @@
               </div>
             </div>
             <!--GASISTA-->
-            <div class="proyecto">
+            <div class="proyecto" id="Gasista">
               <img src="images/gasista.jpg" alt="" />
               <div class="overlay">
                 <h3>Gasista matriculado</h3>
                 <p>Testeos</p>
               </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" id="Gasista">
               <img src="images/gasista.jpg" alt="" />
               <div class="overlay">
                 <h3>Gasista matriculado</h3>
                 <p>Instalación de cañerías de gas.</p>
               </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" id="Gasista">
               <img src="images/gasista.jpg" alt="" />
               <div class="overlay">
                 <h3>Gasista matriculado</h3>
                 <p>Tareas de mantenimiento.</p>
               </div>           
             </div>
+             <!--PLOMERO-->
+             <div class="proyecto" href="#plomero">
+              <img src="images/plomeria.jpg" alt="" />
+              <div class="overlay">
+                <h3>Plomeo matriculado</h3>
+                <p>Testeos</p>
+              </div>
+            </div>
+            <div class="proyecto" id="plomero">
+              <img src="images/plomeria.jpg" alt="" />
+              <div class="overlay">
+                <h3>Plomero matriculado</h3>
+                <p>Instalación de cañerías de gas.</p>
+              </div>
+            </div>
+            <div class="proyecto" id="plomero">           
+              <img src="images/plomeria.jpg" alt="" />
+              <div class="overlay">
+                <h3>Plomero matriculado</h3>
+                <p>Tareas de mantenimiento.</p>
+              </div>           
+            </div>
           </div>
         </div>
     </section> 
-          <!-- RUBROS PORFOLIO / GALERÍA-->
-          <section id="portfolio" class="portfolio">
-            <div class="contenido-seccion">              
-              <div class="galeria">
-
-                <!--PLOMERÍA-->
-                <div class="proyecto">
-                  <img src="images/plomeria.jpg" alt="" />
-                  <div class="overlay">                       
-                    <h3>Plomero Matriculado </h3>
-                    <p>Testeo.</p>
-                  </div>
-                </div>
-                <div class="proyecto">
-                  <img src="images/plomeria.jpg" alt="" />
-                  <div class="overlay">
-                    <h3>Plomero Matriculado </h3>
-                    <p>Instalación de cañerias.</p>
-                  </div>
-                </div>
-                <div class="proyecto">
-                  <img src="images/plomeria.jpg" alt="" />
-                  <div class="overlay">
-                    <h3>Plomero Matriculado </h3>
-                    <p>Tareas de mantenimiento.</p>
-                  </div>
-                </div>
-                <div class="proyecto">
-                    <img src="images/plomeria.jpg" alt="" />
-                    <div class="overlay">                       
-                      <h3>Plomero Matriculado </h3>
-                      <p>Testeo.</p>
-                    </div>
-                  </div>
-                  <div class="proyecto">
-                    <img src="images/plomeria.jpg" alt="" />
-                    <div class="overlay">
-                      <h3>Plomero Matriculado </h3>
-                      <p>Instalación de cañerias.</p>
-                    </div>
-                  </div>
-                  <div class="proyecto">
-                    <img src="images/plomeria.jpg" alt="" />
-                    <div class="overlay">
-                      <h3>Plomero Matriculado </h3>
-                      <p>Tareas de mantenimiento.</p>
-                    </div>
-                  </div>
-                
-                </div>
-              </div>
-            </div>
-        </section>         
+          
             
             
        
-     <footer>      
-      <section id="contacto"class="footer__copy container">
-        <div class="footer__social">
-          <a href="#" class="footer__icons"
-            ><img src="./images/facebook.svg" class="footer__img"
-          /></a>
-          <a href="#" class="footer__icons"
-            ><img src="./images/twitter.svg" class="footer__img"
-          /></a>
-          <a href="#" class="footer__icons"
-            ><img src="./images/youtube.svg" class="footer__img"
-          /></a>
+    <footer class="pie-pagina" id="contacto">
+        <div class="grupo-1">          
+          <div class="box">
+            <h2>Facundo Angelico <i>(Backend)</i></h2>
+            <div class="red-social">
+              <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+              <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Marina A. López <i>(Frontend)</i></h2>
+            <div class="red-social">      
+              
+              <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+              <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+              
+            </div>
+          </div>
+          <div class="box">
+            <h2>Santiago Moran <i>(Frontend)</i></h2>
+            <div class="red-social">
+              <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
+              <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+             
+            </div>
+          </div>
         </div>
-
-        <h3 class="footer__copyright">
-          Derechos reservados &copy; Grupo B
-        </h3>
-      </section>
-    </footer>   
+        <div class="grupo-2">
+          <small
+            >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
+            Reservados.</small>
+        </div>
+      </footer>
     <script src="js/slider.js"></script>
   </body>
 </html>

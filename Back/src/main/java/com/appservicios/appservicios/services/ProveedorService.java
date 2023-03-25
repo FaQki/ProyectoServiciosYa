@@ -84,11 +84,11 @@ public class ProveedorService extends UsuarioService{
     }
 
     @Transactional
-    public void modificarProveedor(String foto, Integer dni, String nombre, String domicilio, String telefono, String email, String barrio, String password, String password2) throws Miexcepcion {
+    public void modificarProveedor(String foto, Integer dni, String nombre, String domicilio, String telefono, String email,int id_proveedor, String password, String password2) throws Miexcepcion {
 
         validar(foto, dni, nombre, domicilio, telefono, email, password, password2);
 
-        Optional<Proveedor> resp = provRepo.findById(dni);
+        Optional<Proveedor> resp = provRepo.findById(id_proveedor);
 
         if (resp.isPresent()) {
 
@@ -108,9 +108,9 @@ public class ProveedorService extends UsuarioService{
     }
 
     @Transactional
-    public void eliminarProveedor(Integer dni)  {
+    public void eliminarProveedor(int id_proveedor)  {
 
-        Optional<Proveedor> resp = provRepo.findById(dni);
+        Optional<Proveedor> resp = provRepo.findById(id_proveedor);
         if (resp.isPresent()) {
             Proveedor prov = resp.get();
             provRepo.delete(prov);

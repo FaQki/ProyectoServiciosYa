@@ -1,6 +1,7 @@
 package com.appservicios.appservicios.services;
 
 import com.appservicios.appservicios.entidades.Cliente;
+import com.appservicios.appservicios.entidades.Proveedor;
 import com.appservicios.appservicios.entidades.Servicio;
 import com.appservicios.appservicios.entidades.Usuario;
 import com.appservicios.appservicios.excepciones.Miexcepcion;
@@ -22,7 +23,7 @@ public class ClienteService  extends UsuarioService{
 
   
     @Autowired
-    private ClienteRepositorio ClienteRepo;
+    private ClienteRepositorio clienteRepo;
     @Autowired
     private UsuarioRepositorio userRepo;
 
@@ -37,7 +38,7 @@ public class ClienteService  extends UsuarioService{
 
         List<Cliente> clientes = new ArrayList();
 
-        clientes = ClienteRepo.findAll();
+        clientes = clienteRepo.findAll();
 
         return clientes;
 
@@ -47,7 +48,7 @@ public class ClienteService  extends UsuarioService{
 
         validar(dni, nombre, domicilio, telefono, email, password, password2);
 
-        Optional<Cliente> resp = ClienteRepo.findById(dni);
+        Optional<Cliente> resp = clienteRepo.findById(dni);
 
         if (resp.isPresent()) {
 
@@ -64,6 +65,17 @@ public class ClienteService  extends UsuarioService{
 
     }
 
+    @Transactional
+    public void eliminarCliente(int id_cliente)  {
+
+        Optional<Cliente> resp = clienteRepo.findById(id_cliente);
+        if (resp.isPresent()) {
+            Cliente client = resp.get();
+            clienteRepo.delete(client);
+
+        }
+
+    }
 
     
     
