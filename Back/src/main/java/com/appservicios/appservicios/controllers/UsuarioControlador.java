@@ -30,31 +30,32 @@ public class UsuarioControlador {
     public String registar() {
         return "registroUsuario.html";
     }
-/**
+
     @PostMapping("/registro")
     public String registro(
-            @RequestParam("dni") Integer dni,
-            @RequestParam("nombre") String nombre,
-            @RequestParam("domicilio") String domicilio,
-            @RequestParam("telefono") String telefono,
-            @RequestParam("email") String email,
-            @RequestParam("password") String password,
+            @RequestParam String nombre,
+            @RequestParam String domicilio,
+            @RequestParam String telefono,
+            @RequestParam String email,
+            @RequestParam String password,
+            @RequestParam String password2,
             ModelMap modelo) {
 
         try {
 
-            usuarioService.crearUsuario(nombre, domicilio, telefono, email, password, password);
-            
-            
+            usuarioService.crearUsuario(nombre, domicilio, telefono, email, password, password2);
+
+
             modelo.put("exito", "El usuario fue creado correctamente");
 
+
         } catch (Miexcepcion e) {
-            
+
             modelo.put("error", e.getMessage());
         }
 
         return "index.html";
 
     }
-**/
+
 }

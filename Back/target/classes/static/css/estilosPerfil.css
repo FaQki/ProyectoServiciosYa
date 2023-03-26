@@ -1016,18 +1016,18 @@ ul.tabs li a {
   padding: 20px 0;
 }
 
-/*.active {
+.active {
   background: #0984cc;
-}*/
+}
 
 ul.tabs li a .tab-text {
   margin-left: 8px;
 }
 
-ul.tabs li a .tab-texts {
+/*ul.tabs li a .tab-texts {
   margin-left: 250%;
   cursor: none;
-}
+}*/
 
 #tab7 {
   margin-left: 30%;
@@ -1267,6 +1267,12 @@ P {
   width: 100%;
 
   font-family: "Urbanist", sans-serif;
+}
+
+#tab6 h1 {
+  font-size: 25px;
+  color: #000;
+  font-family: "Righteous";
 }
 
 form .consulta {
@@ -1550,7 +1556,7 @@ td {
 estilos de la utilidad
 Copiar esto
 =====================================*/
-.body-chat img {
+/*.body-chat img {
   width: 100%;
 }
 .body-chat .avatar img {
@@ -1583,10 +1589,10 @@ Copiar esto
   margin-right: 1.5rem;
   border-right: 1px solid #e7e7e7;
   padding-right: 15px;
-}
+}*/
 
 /* seccion usuarios */
-.input-buscar {
+/*.input-buscar {
   display: flex;
   align-items: center;
   position: relative;
@@ -1679,10 +1685,10 @@ Copiar esto
   color: #fff;
   padding: 0 8px;
   border-radius: 8px;
-  /*vertical-align: center;*/
+  /*vertical-align: center;
 }
 
-/* seccion chat */
+/* seccion chat 
 .seccion-chat {
   flex-basis: 0;
   flex-grow: 1;
@@ -1730,7 +1736,7 @@ Copiar esto
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
-/* mensaje */
+/* mensaje 
 .panel-chat {
   display: block;
   overflow-y: auto;
@@ -1824,7 +1830,7 @@ Copiar esto
 }
 
 /* panel escritura */
-.panel-escritura {
+/*.panel-escritura {
   display: block;
 }
 .panel-escritura .textarea {
@@ -1896,7 +1902,7 @@ Copiar esto
   border-radius: 3px;
   content: "Seleccionar"; /* testo por defecto */
   position: absolute;
-  left: 0;
+  left: 50%;
   right: 0;
   top: 0;
   bottom: 0;
@@ -1904,7 +1910,6 @@ Copiar esto
 
 .file-select input[type="file"] {
   opacity: 0;
-
   height: 32px;
   display: inline-block;
   border-radius: 12px;
@@ -1912,7 +1917,7 @@ Copiar esto
 
 #src-file1::before {
   border-radius: 12px;
-  content: "Subir tu cv";
+  content: "Seleccioner";
 }
 
 @media (min-width: 768px) {
@@ -1998,4 +2003,46 @@ Copiar esto
     grid-gap: 30px;
     padding: 35px 0px;
   }
+}
+
+/*Sistema de tablas para aceptar rechazar*/
+
+.container_tabla {
+  margin-top: 40px;
+  border: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+table {
+  color: #fff;
+  font-size: 14px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: -50px;
+}
+
+thead {
+  background: rgba(243, 140, 210, 0.4);
+}
+
+th {
+  padding: 20px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+.mensaje {
+  width: 50%;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: rgba(243, 103, 199, 0.4);
 }

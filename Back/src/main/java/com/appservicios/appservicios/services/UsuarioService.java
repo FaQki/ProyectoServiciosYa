@@ -31,13 +31,12 @@ public class UsuarioService implements UserDetailsService {
     private UsuarioRepositorio userRepo;
 
     @Transactional
-    public void crearUsuario(Long id_Usuario, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void crearUsuario(String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
         validar(nombre, domicilio, telefono, email, password, password2);
 
         Usuario user = new Usuario();
-      
-        user.setId_Usuario(id_Usuario);
+
         user.setPassword(password);
         user.setNombre(nombre);
         user.setDomicilio(domicilio);
