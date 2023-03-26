@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Proveedor de servicios</title>
+    
+
+
+    <link rel="stylesheet" href=css/estilosPerfil.css />
+
+  </head>
+  <body>
+    <header class="hero">      
+        <div class="navbar">  
+          <div><h2 class="nav__logo"><img src="images/Logo1.png" class="image"
+            /></h2></div>                
+          <div class="nav-header">                      
+              <!-- responsive navbar toggle button -->
+              <input type="checkbox" id="nav-check" />
+              <div class="nav-btn">
+                <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+              </div>
+              <!-- Navbar items -->          
+              <div class="nav-links">            
+                <a href="index.html">Inicio</a>
+                <a href="index.html#sobremi">Nosotros</a>
+                <!-- Dropdown menu -->
+                 <!--<div class="dropdown">-->
+                  <a class="#" href="index.html#portfolio">Servicios
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <!--<div class="drop-content">
+                    <a href="#">Mensajeria</a>
+                    <a href="#">Reseñas</a>                    
+                  </div>
+                </div>-->
+                <a href="#contacto">Contacto</a>
+               <!-- <a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
+                <a href="registrosVentanaAlert.html">Regístrate</a>-->
+                <!--<a href="perfilUsuario.html">Mi cuenta</a>-->
+                <div class="dropdown">
+                  <a class="dropBtn" href="#"
+                    >Mi cuenta
+                    <!--<i class="fas fa-angle-down"></i>-->
+                  </a>
+                  <div class="drop-content">
+                   <!-- <a href="#mensajeria">Mensajeria</a>-->
+                   <a href="#inicio">Perfil</a>
+                    <a href="#resenia">Reseñas</a>
+                  </div>
+                </div>
+              </div>
+          </div>      
+    </header>   
+    <body style="background-color:#f7c34a;"></body>
+        
+      <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="images/huevo.jpg" alt="" />
+        </div>
+        <h1>Egg</h1>
+        <h2>amarillo</h2>
+        
+      </div>
+            <td>                      
+        
+                <div class="wrap">
+                  <ul class="tabs">
+                    <!--<li><a href="#tab1"><span class=""></span><span class="tab-text">Sevicio</span></a></li>-->
+                    <li><a href="#tab7"><span class=""></span><span class="tab-texts">Contacto</span></a></li>
+                   <!-- <li><a href="#tab3"><span class=""></span><span class="tab-text">Comentarios</span></a></li>-->
+                    <li><a href="#tab4"><span class=""></span><span class="tab-text">Mis pedidos</span></a></li>
+                    <!--<li><a href="#tab5"><span class=""></span><span class="tab-text">Calificación</span></a></li>-->                 
+                  
+                  </ul>
+              
+                  <div class="secciones">
+                    
+                    <!--<article id="tab1">         
+                         
+                         <h1 >Detalles</h1><br>
+                         <p class="sobremiPerfil">
+                          Hola, soy Rayo de Luz, me encargo de arreglar desde enchufes hasta instalaciones de centros de carga, paneles eléctricos industriales, líneas de alta tensión, etc. El trabajo del electricista no se limita a trabajar en viviendas o edificios, con el crecimiento de la industria los electricistas se forman y capacitan para realizar trabajos como el de reparación y mantenimiento preventivo de todo tipo motores eléctricos monofásicos y trifásicos, contactores, limitadores eléctricos, arrancadores suaves (soft start)
+                        </p>
+                    </article>-->
+                    <article id="tab7">
+                      <h1>Datos Usuario</h1><br>
+                      <section id="sobremiPerfil" class="sobremiPerfil">
+                        <div class="contenido-seccionPerfil">                   
+                          <div class="fila">                          
+                            <div class="col">                              
+                              <ul>  
+                                <li>
+                                  <strong>Dirección</strong>
+                                  Bario 3 manzana 2 
+                                </li>                                      
+                                <li>
+                                  <strong>Telefono</strong>
+                                  +54 9 379 4591718
+                                </li>
+                                <li>
+                                  <strong>Email</strong>
+                                  saltara16@gmail.com 
+                                </li>                                                            
+                              </ul>           
+                      </section>
+                    </article>
+
+                     <!--<article id="tab3">                  
+                          <table class="body_tabla">
+
+                            <tr>
+                              <td><img class="uiluil-comments" src="images/comentario.svg" alt=""></td>                              
+                            </tr>
+                            <tr>
+                              <td><strong class="text">Reseñas totales</strong></td>                              
+                            </tr>
+                            <tr>                              
+                              <td class="number"> <p> 3 </p> </td>
+                            </tr>                     
+
+                          </table>            
+                                    
+                   </article>-->                       
+                    <article id="tab4">
+                      <h1>servicio que solicite</h1><br>
+
+                      <div class="container_tabla">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>ID</th>
+                              <th>Nombre</th>
+                              <th>Correo electronico</th>
+                              <th>Precio</th>
+                              <th class="mensaje">Mensaje</th>                              
+                              <th></th>
+                              <th></th>       
+                           
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Facundo Angelico</td>
+                              <td>norecuerdo@gmail.com</td>
+                              <td>$25000</td>                
+                              <td>
+                                No contrato más a este **** me cobro re caro y ni termino el ****
+                                trabajo, UN DESATSRE!
+                              </td>             
+                              <td><input type="button" onclick="rechazarFila();" value="Rechazar" /></td>
+                              <td><input type="button" onclick="aceptarFila();" value="Aceptar" /></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>             
+                  </section>
+                     <!-- <form  action="consulta">
+                        <h1>Excelente atención:</h1>             
+
+                            <table id="customers">
+                              <tr>
+                                <th>Rubro</th>
+                                <th>Nombre</th>
+                                <th>Contacto</th>
+                                <th>Calificación</th>
+                              </tr>
+                              <tr>
+                                <td>Electricista</td>
+                                <td>Maria Anders</td>
+                                <td>+54**********</td>
+                                <td>*****</td>
+                              </tr>
+                              <tr>
+                                <td>Plomería</td>
+                                <td>Christina Berglund</td>
+                                <td>+54**********</td>
+                                <td>****</td>
+                              </tr>
+                              <td>Plomería</td>
+                              <td>Toxi Fire</td>
+                              <td>+54**********</td>
+                              <td>****</td>
+                            </tr>                      
+                            </table>-->               
+                        
+                            
+                       
+                      <!-- <button>Cragar Fotografía</button>
+                       <p class="link"><a href="index2.html">¿Ya tienes cuenta?</a></p>
+                     </form>                                                    
+                    </article>-->   
+                    
+      </td>      
+    </section> 
+
+  <!--==========================
+=            html            =
+===========================-->
+              <!--  <section class="titulo" id="reseña">
+                <div class="titulo">
+                  <p >
+                    Chat
+                  </p>
+                </div>
+              </section> 
+        <section class="mensaje-cuerpo">
+          
+
+          <section class="body-chat" id="mensajeria">
+            <div class="seccion-titulo">
+                <h3>
+                    <i class="fas fa-comments"></i>
+                    Mensajeria
+                </h3>
+            </div>
+            <div class="seccion-usuarios">
+                <div class="seccion-buscar">
+                    <div class="input-buscar">
+                        <input type="search" placeholder="Buscar usuario">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="seccion-lista-usuarios">
+                    <div class="usuario">
+                        <div class="avatar">
+                            <img src="ruta_img" alt="img">
+                            <span class="estado-usuario enlinea"></span>
+                        </div>
+                        <div class="cuerpo">
+                            <span> Nombre apellido</span>
+                            <span>detalles de mensaje</span>
+                        </div>
+                        <span class="notificacion">
+                            3
+                        </span>
+                    </div>
+                    <div class="usuario">
+                        <div class="avatar">
+                            <img src="ruta_img" alt="img">
+                            <span class="estado-usuario ocupado"></span>
+                        </div>
+                        <div class="cuerpo">
+                            <span> Nombre apellido</span>
+                            <span>detalles de mensaje</span>
+                        </div>
+                        <span class="notificacion">
+                            1
+                        </span>
+                    </div>
+                    <div class="usuario">
+                        <div class="avatar">
+                            <img src="ruta_img" alt="img">
+                            <span class="estado-usuario desconectado"></span>
+                        </div>
+                        <div class="cuerpo">
+                            <span> Nombre apellido</span>
+                            <span>detalles de mensaje</span>
+                        </div>
+                        <span class="notificacion">
+                            1
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="seccion-chat">
+                <div class="usuario-seleccionado">
+                    <div class="avatar">
+                        <img src="ruta_img" alt="img">
+                    </div>
+                    <div class="cuerpo">
+                        <span>Nombre de usuario</span>
+                        <span>Activo - Escribiendo...</span>
+                    </div>
+                    <div class="opciones">
+                        <ul>
+                            <li>
+                                <button type="button"><i class="fas fa-video"></i></button>
+                            </li>
+                            <li>
+                                <button type="button"><i class="fas fa-phone-alt"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-chat">
+                    <div class="mensaje">
+                        <div class="avatar">
+                            <img src="ruta_img" alt="img">
+                        </div>
+                        <div class="cuerpo">
+                          
+                            <div class="texto">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Dolor eligendi voluptatum dolore voluptas iure.
+                                <span class="tiempo">
+                                    <i class="far fa-clock"></i>
+                                    Hace 5 min
+                                </span>
+                            </div>
+                            <ul class="opciones-msj">
+                                <li>
+                                    <button type="button">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button">
+                                        <i class="fas fa-share-square"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!-- derecha -->
+                    <!--<div class="mensaje left">
+                        <div class="cuerpo">
+              
+                            <div class="texto">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Dolor eligendi voluptatum dolore voluptas iure.
+                                <span class="tiempo">
+                                    <i class="far fa-clock"></i>
+                                    Hace 6 min
+                                </span>
+                            </div>
+                            <ul class="opciones-msj">
+                                <li>
+                                    <button type="button">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button">
+                                        <i class="fas fa-share-square"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="avatar">
+                            <img src="ruta_img" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-escritura">
+                    <form class="textarea">
+                        <div class="opcines">
+                            <button type="button">
+                                <i class="fas fa-file"></i>
+                                <label for="file"></label>
+                                <input type="file" id="file">
+                            </button>
+                            <button type="button">
+                                <i class="far fa-image"></i>
+                                <label for="img"></label>
+                                <input type="file" id="img">
+                            </button>
+                        </div>
+                        <textarea placeholder="Escribir mensaje"></textarea>
+                        <button type="button" class="enviar">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+          </section>
+          End of html-->
+
+        </section>
+
+
+   <!--RESEÑA-->
+    <section class="titulo" id="resenia">
+      <div class="titulo">
+        <p >
+          Reseñas de clientes:
+        </p>
+      </div>
+    </section> 
+
+    <section class="testimony">
+      <div class="testimony__container container">
+        <img
+          src="./images/leftarrow.svg"
+          class="testimony__arrow"
+          id="before"
+        />
+
+        
+        <section class="testimony__body testimony__body--show" data-id="1">
+          
+          <div class="testimony__texts">
+            
+            
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+             <div id="testimonios_titulos"> Angelico Facundo, </div>
+              <span class="testimony__course">Bueno</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, asperiores eaque totam nulla repudiandae quasi, deserunt
+              culpa exercitationem blanditiis laborum veniam laboriosam saepe
+              reiciendis dolorem. Cum, ratione voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Facundo.jpeg" class="testimony__img" />
+          </figure>
+        </section>
+
+        <section class="testimony__body" data-id="2">
+          <div class="testimony__texts">
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+              
+              <div id="testimonios_titulos">López Marina,</div>
+              <span class="testimony__course">Excelente atención</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione
+              voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Marina.png" class="testimony__img" />
+          </figure>         
+        </section>
+        <img
+        src="./images/rightarrow.svg"
+        class="testimony__arrow"
+        id="next"
+       />
+    </div>
+  </section>  
+
+  <footer class="pie-pagina" id="contacto">
+    <div class="grupo-1">          
+      <div class="box">
+        <h2>Facundo Angelico <i>(Backend)</i></h2>
+        <div class="red-social">
+          <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Marina A. López <i>(Frontend)</i></h2>
+        <div class="red-social">      
+          
+          <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="box">
+        <h2>Santiago Morán <i>(Frontend)</i></h2>
+        <div class="red-social">
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+         
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small
+        >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
+        Reservados.</small>
+    </div>
+  </footer>
+  <!--Bootstrap-->
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+  crossorigin="anonymous"
+></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+   <!-- <script src="js/tabla.js"></script>-->
+    <script src="js/BotonEliminar.js"></script>
+  </body>
+</html>

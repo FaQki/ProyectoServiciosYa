@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Proveedor de servicios</title>
+    <link rel="stylesheet" href=css/estilos.css />
+    <link rel="stylesheet" href="css/">
+    
+  </head>
+  <body>
+   
+
+    <header class="hero">      
+        <div class="navbar">  
+          <div><h2 class="nav__logo"><img src="images/Logo1.png" class="image"
+            /></h2></div>  
+          <div class="nav-links"> 
+            
+             
+                        
+          <div class="nav-header">
+                      
+              <!-- responsive navbar toggle button -->
+              <input type="checkbox" id="nav-check" />
+              <div class="nav-btn">
+                <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+              </div>
+              <!-- Navbar items -->          
+                      
+                <a href="#">Inicio</a>
+                <a href="#sobremi">Nosotros</a>
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                  <a class="dropBtn" href="#portfolio"
+                    >Servicios
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <!--<div class="drop-content">
+                    <a href="#">Electricista</a>
+                    <a href="#">Gasista</a>
+                    <a href="#">Plomería</a>
+                  </div>-->
+                </div>                
+                <a href="#contacto">Contacto</a>
+                <!--<a href="registrosVentanaAlert.html">Ingresa a la app</a>-->
+                <!--<a href="registrosVentanaAlert.html">Regístrate</a>-->                
+                <!--<a href="perfilUsuario.html">Mi cuenta</a>-->
+                <!--<a href="Administrador.html">Administrador</a>-->
+               <div class="dropdown">
+                  <a id="iniciarSesion" class="dropBtn" href="iniciarSesion.html">Mi cuenta
+                    <i class="fas fa-angle-down"></i>
+                  </a>                  
+                   <div class="drop-content">
+                    <a href="perfilProveedor.html">Proveedor</a>
+                    <a href="perfilUsuario.html">Usuarios</a>
+                  </div>
+                </div>
+              </div>
+          </div>      
+    </header>  
+      
+    <section id="pantalla-dividida">
+      <div class="izquierda">
+
+        
+      </div>
+
+      <div class="derecha"> 
+        <section class="hero__main__container">
+         
+          
+          <div class="hero__texts">
+           
+            <h1 class="hero__title">
+              Contactate con los
+              <p>mejores proveedores</p>
+              de servicios.
+            </h1>
+          </div>    
+          <section class="testimony" id="Acerca">
+            <div class="testimony__container container">
+              <img
+              
+                src="./images/leftarrow.png"
+                class="testimony__arrow"
+                id="before"
+              />
+            
+              <section class="testimony__body testimony__body--show" data-id="1">
+                <div class="testimony__texts">                 
+                  <h2 class="subtitlee">Electricista<br /></h2>
+                </div>
+  
+                <figure class="testimony__picture">                  
+                  <img src="./images/electricista.jpg" class="testimony__img" />
+                </figure>
+              </section>
+  
+              <section class="testimony__body" data-id="2">                
+                <div class="testimony__texts">
+                  <h2 class="subtitlee">Gasista<br /></h2>
+                </div>
+  
+                <figure class="testimony__picture">
+                  <img src="./images/gasista.jpg" class="testimony__img" />
+                </figure>
+              </section>
+  
+              <section class="testimony__body" data-id="3">
+                <div class="testimony__texts">
+                  <h2 class="subtitlee">Plomería<br /></h2>
+                </div>  
+                <figure class="testimony__picture">
+                  <img src="./images/plomeria.jpg" class="testimony__img" />
+                </figure>
+              </section>
+  
+              <img
+                src="./images/rightarrow.png"
+                class="testimony__arrow"
+                id="next"
+              />
+            </div>
+          </section>
+           
+        </section>
+      
+      </div>
+       
+        
+    </section>   
+        
+ 
+        
+        
+          <!--Forma-->
+          <div style="height: 150px; overflow: hidden" class="hero__waves">
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              style="height: 100%; width: 100%"
+            >
+              <path
+                d="M0.00,49.99 C262.08,217.40 378.89,-120.09 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff"
+              ></path>
+            </svg>
+          </div>  
+        </div> 
+      </div>  
+     
+      <!-- SECCION SOBRE MI (la pagina) -->
+      <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+          <h2 a href="nav__links">Sobre nosotros</h2>
+          <p>
+            <span>Somos tres barrios cerrados</span> de la localidad de Chacras
+            de Coria en Mendoza, <br> 
+            que nos juntamos para formar una red de proveedores (Electricista,
+            Gasista, Plomería, etc.) </br> con la mejor calidad de profecionales del
+            lugar.
+          </p>
+        </div>
+      </section>
+
+       <!--Preguntas frecuentes -->
+
+      <section class="questions container">
+        <h2 class="subtitle">Preguntas frecuentes</h2>
+        <p class="questions__paragraph">
+         Que más consultan nuestros usuarios.
+        </p>
+
+        <section class="questions__container">
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                ¿Qué requisitos se necesitan para solicitar un servicio?
+                <span class="questions__arrow">
+                  <img src="./images/arrow.svg" class="questions__img" />
+                </span>
+              </h3>
+
+              <p class="questions__show">
+                Para poder ver y solicitar cualquier servicio que ofrecen los proveedores
+                se necesita estar registrado e iniciar sesión como usuario.
+              </p>
+            </div>
+          </article>
+
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                ¿Como me puedo conviertir en un proveedor?
+                <span class="questions__arrow">
+                  <img src="./images/arrow.svg" class="questions__img" />
+                </span>
+              </h3>
+
+              <p class="questions__show">
+              Para poder ser un proveedor debes rellenar un formulario al registrarte
+              completando una serie de preguntas y pertenecer a alguno de los tres barrios de
+              La localidad de Chacras de Coria en Mendoza.
+              </p>
+            </div>
+          </article>
+
+          <article class="questions__padding">
+            <div class="questions__answer">
+              <h3 class="questions__title">
+                ¿Cuánto cuesta contratar un servicio?
+                <span class="questions__arrow">
+                  <img src="./images/arrow.svg" class="questions__img" />
+                </span>
+              </h3>
+
+              <p class="questions__show">
+                Cada tarifa lo colocan los proveedores dependiendo del trabajo que deben realizar, puedes consultar en el perfil 
+                a través de un formulario de presupuesto de servicio.
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+       
+      <!-- RUBROS PORFOLIO / GALERÍA-->
+    <section id="portfolio" class="portfolio">
+      <div class="contenido-seccion">
+        <BR></BR><BR></BR><BR>
+      </BR><h2>Proveedores de servicios:</h2>
+
+      <p>
+          <span>Somos tres barrios cerrados</span> de la localidad de Chacras
+          de Coria en Mendoza, <br> 
+          que nos juntamos para formar una red de proveedores (Electricista,
+          Gasista, Plomería, etc.) </br> con la mejor calidad de profecionales del
+          lugar.
+        </p> <br></br>
+
+        <form action="">
+          <input
+            type="text"
+            class="barra-busqueda"
+            id="barra-busqueda"
+            placeholder="Buscar"
+          />
+        </form>
+        <div class="categorias" id="categorias">
+          <a href="#" class="activo">Todos</a>
+          <a href="#Electricista" >Electricista</a>
+          <a href="#Gasista">Gasista</a>
+          <a href="#plomero">Plomero</a>
+          
+        </div>
+        
+
+              <!--eLECTRICISTA-->
+              <div class="galeria">
+                <div class="proyecto" id="Electricista">                    
+                  <img src="images/electricista.jpg" alt="" />
+                  <div class="overlay">
+              <h3>Ingeniero Eléctrico </h3>
+              <p>Iluminación.</p>
+            </div>
+          </div>
+          <div class="proyecto" id="Electricista">              
+            <img src="images/electricista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Ingeniero Eléctrico </h3>
+              <p>Ensamblar e instalar cableado eléctrico.</p>
+            </div>
+          </div>
+          <div class="proyecto" id="Electricista">              
+            <img src="images/electricista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Ingeniero Eléctrico </h3>
+              <p>Tareas de mantenimiento.</p>
+            </div>
+          </div>
+          <!--GASISTA-->
+          <div class="proyecto" id="Gasista">
+            <img src="images/gasista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Gasista matriculado</h3>
+              <p>Testeos</p>
+            </div>
+          </div>
+          <div class="proyecto" id="Gasista">
+            <img src="images/gasista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Gasista matriculado</h3>
+              <p>Instalación de cañerías de gas.</p>
+            </div>
+          </div>
+          <div class="proyecto" id="Gasista">
+            <img src="images/gasista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Gasista matriculado</h3>
+              <p>Tareas de mantenimiento.</p>
+            </div>           
+          </div>
+           <!--PLOMERO-->
+           <div class="proyecto" href="#plomero">
+            <img src="images/plomeria.jpg" alt="" />
+            <div class="overlay">
+              <h3>Plomeo matriculado</h3>
+              <p>Testeos</p>
+            </div>
+          </div>
+          <div class="proyecto" id="plomero">
+            <img src="images/plomeria.jpg" alt="" />
+            <div class="overlay">
+              <h3>Plomero matriculado</h3>
+              <p>Instalación de cañerías de gas.</p>
+            </div>
+          </div>
+          <div class="proyecto" id="plomero">           
+            <img src="images/plomeria.jpg" alt="" />
+            <div class="overlay">
+              <h3>Plomero matriculado</h3>
+              <p>Tareas de mantenimiento.</p>
+            </div>           
+          </div>
+        </div>
+      </div>
+  </section> 
+        
+          
+     
+  <footer class="pie-pagina" id="contacto">
+    <div class="grupo-1">          
+      <div class="box">
+        <h2>Facundo Angelico <i>(Backend)</i></h2>
+        <div class="red-social">
+          <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Marina A. López <i>(Frontend)</i></h2>
+        <div class="red-social">      
+          
+          <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="box">
+        <h2>Santiago Morán <i>(Frontend)</i></h2>
+        <div class="red-social">
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+         
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small
+        >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
+        Reservados.</small>
+    </div>
+  </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/questions.js"></script>
+   
+  </body>
+</html>

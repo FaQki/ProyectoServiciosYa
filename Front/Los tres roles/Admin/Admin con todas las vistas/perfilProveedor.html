@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Proveedor de servicios</title>
+    <link rel="stylesheet" href=css/estilosPerfil.css />
+  </head>
+  <body>
+    <header class="hero">      
+        <div class="navbar">  
+          <div><h2 class="nav__logo"><img src="images/Logo1.png" class="image"
+            /></h2></div>                
+          <div class="nav-header">                      
+              <!-- responsive navbar toggle button -->
+              <input type="checkbox" id="nav-check" />
+              <div class="nav-btn">
+                <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+              </div>
+              <!-- Navbar items -->          
+              <div class="nav-links">            
+                <a href="index.html">Inicio</a>
+                <a href="index.html#sobremi">Nosotros</a>
+                <!-- Dropdown menu -->
+                 <!--<div class="dropdown">-->
+                  <a class="#" href="index.html#portfolio">Servicios
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <!--<div class="drop-content">
+                    <a href="#">Mensajeria</a>
+                    <a href="#">Reseñas</a>                    
+                  </div>
+                </div>-->
+                <a href="#contacto">Contacto</a>
+               <!-- <a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
+                <a href="registrosVentanaAlert.html">Regístrate</a>-->
+                <!--<a href="perfilUsuario.html">Mi cuenta</a>-->
+                <div class="dropdown">
+                  <a class="dropBtn" href="#"
+                    >Mi cuenta
+                    <!--<i class="fas fa-angle-down"></i>-->
+                  </a>
+                  <div class="drop-content">
+                    <a href="#inicio">Perfil</a>
+                    <a href="#resenia">Reseñas</a>
+                  </div>
+                </div>
+              </div>
+          </div>      
+    </header>   
+    <body style="background-color: #1e3c72;"></body>
+    
+      <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="images/Marina.png" alt="" />
+        </div>
+        <h1>Rayo de Luz</h1>
+        <h2>Ingeniero Electrico</h2>
+        <div class="redes">
+          <form>
+            <p class="clasificacion">
+              <input id="radio1" type="radio" name="estrellas" value="5"><!--
+              --><label for="radio1">★</label><!--
+              --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+              --><label for="radio2">★</label><!--
+              --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+              --><label for="radio3">★</label><!--
+              --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+              --><label for="radio4">★</label><!--
+              --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+              --><label for="radio5">★</label>
+            </p>
+          </form>
+        </div>
+      </div>
+      <td>     
+                    
+        
+                <div class="wrap">
+                  <ul class="tabs">
+                    <li><a href="#tab1"><span class=""></span><span class="tab-text">Sevicio</span></a></li>
+                    <li><a href="#tab2"><span class=""></span><span class="tab-text">Contacto</span></a></li>
+                    <li><a href="#tab3"><span class=""></span><span class="tab-text">Presupuesto</span></a></li>
+                    <li><a href="#tab4"><span class=""></span><span class="tab-text">Galería</span></a></li>
+                   <li><a href="#tab5"><span class=""></span><span class="tab-text">Calificación</span></a></li>                   
+                   <li><a href="#tab6"><span class=""></span><span class="tab-text">Pedidos</span></a></li>                 
+                  
+                  </ul>
+              
+                  <div class="secciones">
+                    <article id="tab1">                      
+                         <!-- SECCION SOBRE MI PERFIL PROVEEDOR-->
+                         <h1 >Especialización</h1><br>
+                         <p class="sobremiPerfil">
+                          <!--<form action="action=">
+                            <textarea class="formulario__login" id="exampleFormControlTextarea3" rows="4" placeholder="Escribe sobre lo que haces"></textarea> <br>                        
+                        <button>Enviar</button>
+                          </form>-->
+                          Hola, soy Rayo de Luz, me encargo de arreglar desde enchufes hasta instalaciones de centros de carga, paneles eléctricos industriales, líneas de alta tensión, etc. El trabajo del electricista no se limita a trabajar en viviendas o edificios, con el crecimiento de la industria los electricistas se forman y capacitan para realizar trabajos como el de reparación y mantenimiento preventivo de todo tipo motores eléctricos monofásicos y trifásicos, contactores, limitadores eléctricos, arrancadores suaves (soft start)
+                        </p>
+                    </article>
+                    <article id="tab2">
+                      <h1>Datos Personales</h1><br>
+                      <section id="sobremiPerfil" class="sobremiPerfil">
+                        <div class="contenido-seccionPerfil">      
+                  
+                          <div class="fila">                          
+                            <div class="col">                              
+                              <ul>                                       
+                                <li >
+                                  <strong >Telefono</strong>
+                                  +54 9 379 4591718
+                                </li>
+                                <li >
+                                  <strong>Email</strong>
+                                  saltara16@gmail.com
+                                </li>                                                                 
+                                <li>                                
+                              
+                               </ul>           
+                      </section>
+                    </article>
+                    <article id="tab3">
+                      <form  action="consulta">
+                        <h1>Formulario de Presupuesto </h1>
+                        <input type="text" placeholder="Ingrese su nombre y apellido">                       
+                        <input type="email" placeholder="Ingrese su Correo">                       
+                        <textarea class="formulario__login" id="exampleFormControlTextarea3" rows="4" placeholder="Deja tu consulta"></textarea> <br>                        
+                        <button>Enviar</button>
+                       
+                     </form>                      
+                    </article>                      
+                    <article id="tab4">
+                      <form  action="consulta">
+                        <h1>Galería de trabajo </h1> 
+                        
+                             
+                          <!--<section class="testimony1" id="Acerca">
+                            <div class="testimony__container container1">
+                              <img
+                                src="./images/leftarrow1.png"
+                                class="testimony__arrow1"
+                                id="before1"/>
+                  
+                              <section class="testimony__body1 testimony__body--show1" data-id="1">                          
+                  
+                                <figure class="testimony__picture1">
+                                  <img src="./images/electricista.jpg" class="testimony__img1" />
+                                </figure>
+                              </section>--> 
+                              
+                              
+                                <div class="slide-contenedor">
+                                  <div class="miSlider fade">
+                                      <img src="images/electricista.jpg" alt="">
+                                  </div>
+                                  <div class="miSlider fade">
+                                      <img src="images/fondoPlomeria.jpg" alt="">
+                                  </div>
+                                  <div class="miSlider fade">
+                                      <img src="images/fondoPlomeria.jpg" alt="">
+                                  </div>
+                                  <div class="direcciones">
+                                      <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                                      <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+                                  </div>
+                                  <div class="barras">
+                                      <span class="barra active" onclick="posicionSlide(1)"></span>
+                                      <span class="barra" onclick="posicionSlide(2)"></span>
+                                      <span class="barra" onclick="posicionSlide(3)"></span>
+                                  </div>
+                              </div>                 
+                             
+                              <div class="file-select" id="src-file1">                                 
+                               <input type="file"   for="exampleFormControlSelect1" aria-label="Archivo"  name="src-file1">                                             
+                              </div>                      
+                     </form>
+                    </article>                                                   
+                   
+                      
+                      <article classe="consulta" id="tab5">
+                        <from> 
+                          <p class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                            --><label for="radio1">★</label><!--
+                            --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                            --><label for="radio2">★</label><!--
+                            --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                            --><label for="radio3">★</label><!--
+                            --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                            --><label for="radio4">★</label><!--
+                            --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                            --><label for="radio5">★</label>
+                          </p>
+                        </form>
+                          <h1 class="deja__comentario">Deja tu comentario aquí</h1>
+                          <div class="formulario__login">                                                
+                            <textarea class="formulario__login" id="exampleFormControlTextarea2" rows="4" placeholder="Cuentanos como fue tu experiencia"></textarea>
+                          </div>
+                          <button>Enviar</button>
+                          <form>
+                        </article>
+                        
+                        <article id="tab6">
+                          <h1>servicios que solicitaron</h1><br>    
+                          <div class="container_tabla">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Nombre</th>
+                                  <th>Correo electronico</th>
+                                  <th>Precio</th>
+                                  <th class="mensaje">Mensaje</th>                              
+                                  <th></th>
+                                  <th></th>       
+                               
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>01</td>
+                                  <td>Facundo Angelico</td>
+                                  <td>norecuerdo@gmail.com</td>
+                                  <td>$25000</td>                
+                                  <td>
+                                    No contrato más a este **** me cobro re caro y ni termino el ****
+                                    trabajo, UN DESATSRE!
+                                  </td>             
+                                  <td><input type="button" onclick="rechazarFila();" value="Rechazar" /></td>
+                                  <td><input type="button" onclick="aceptarFila();" value="Aceptar" /></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>             
+                      </section>
+                  </div>
+                </div> 
+      </td>      
+    </section> 
+
+
+</section>
+
+   
+    <section class="titulo" id="resenia">
+      <div class="titulo">
+        <p >
+          Reseñas de clientes:
+        </p>
+      </div>
+    </section> 
+
+    <section class="testimony">
+      <div class="testimony__container container">
+        <img
+          src="./images/leftarrow.svg"
+          class="testimony__arrow"
+          id="before"
+        />
+
+        
+        <section class="testimony__body testimony__body--show" data-id="1">
+          
+          <div class="testimony__texts">
+            
+            
+             
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+             <div id="testimonios_titulos"> Angelico Facundo, </div>
+              <span class="testimony__course">Bueno</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, asperiores eaque totam nulla repudiandae quasi, deserunt
+              culpa exercitationem blanditiis laborum veniam laboriosam saepe
+              reiciendis dolorem. Cum, ratione voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Facundo.jpeg" class="testimony__img" />
+          </figure>
+        </section>
+
+        <section class="testimony__body" data-id="2">
+          <div class="testimony__texts">
+            <h2 class="subtitle">
+              <from> 
+                <p class="clasificacion__reseña">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                </p>
+              </form>
+              
+              <div id="testimonios_titulos">López Marina,</div>
+              <span class="testimony__course">Excelente atención</span>
+            </h2>
+            <p class="testimony__review">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+              esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione
+              voluptatum!
+            </p>
+          </div>
+
+          <figure class="testimony__picture">
+            <img src="images/Marina.png" class="testimony__img" />
+          </figure>         
+        </section>
+        <img
+        src="./images/rightarrow.svg"
+        class="testimony__arrow"
+        id="next"
+       />
+    </div>
+  </section>    
+   
+        
+  <footer class="pie-pagina" id="contacto">
+    <div class="grupo-1">          
+      <div class="box">
+        <h2>Facundo Angelico <i>(Backend)</i></h2>
+        <div class="red-social">
+          <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Marina A. López <i>(Frontend)</i></h2>
+        <div class="red-social">      
+          
+          <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="box">
+        <h2>Santiago Morán <i>(Frontend)</i></h2>
+        <div class="red-social">
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+         
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small
+        >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
+        Reservados.</small>
+    </div>
+  </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src=" http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/galeria.js"></script>
+  </body>
+</html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Proveedor de servicios</title>
     <link rel="stylesheet" href=css/estilos.css />
+    <link rel="stylesheet" href="css/">
     
   </head>
   <body>
@@ -35,11 +36,11 @@
                 <a href="#">Inicio</a>
                 <a href="#sobremi">Nosotros</a>
                 <!-- Dropdown menu -->
-               <!-- <div class="dropdown">
-                  <a class="dropBtn" href="#Acerca"
+                <div class="dropdown">
+                  <a class="dropBtn" href="#portfolio"
                     >Servicios
                     <i class="fas fa-angle-down"></i>
-                  </a>-->
+                  </a>
                   <!--<div class="drop-content">
                     <a href="#">Electricista</a>
                     <a href="#">Gasista</a>
@@ -47,9 +48,9 @@
                   </div>-->
                 </div>                
                 <a href="#contacto">Contacto</a>
-                <!--<a href="registrosVentanaAlert.html">Iniciar Sesíon</a>
-                <a href="registrosVentanaAlert.html">Regístrate</a>-->
-                <a href="perfilUsuario.html">Mi cuenta</a>
+                <!--<a href="registrosVentanaAlert.html">Ingresa a la app</a>-->
+                <!--<a href="registrosVentanaAlert.html">Regístrate</a>-->                
+                <!--<a href="perfilUsuario.html">Mi cuenta</a>-->
                 <a href="Administrador.html">Administrador</a>
                 <!--<div class="dropdown">
                   <a id="iniciarSesion" class="dropBtn" href="iniciarSesion.html">Iniciar Sesión
@@ -64,13 +65,19 @@
               </div>
           </div>      
     </header>  
-
+      
     <section id="pantalla-dividida">
       <div class="izquierda">
-       
 
-        <section class="hero__main__container">          
+        
+      </div>
+
+      <div class="derecha"> 
+        <section class="hero__main__container">
+         
+          
           <div class="hero__texts">
+           
             <h1 class="hero__title">
               Contactate con los
               <p>mejores proveedores</p>
@@ -80,22 +87,23 @@
           <section class="testimony" id="Acerca">
             <div class="testimony__container container">
               <img
+              
                 src="./images/leftarrow.png"
                 class="testimony__arrow"
                 id="before"
               />
-  
+            
               <section class="testimony__body testimony__body--show" data-id="1">
-                <div class="testimony__texts">
+                <div class="testimony__texts">                 
                   <h2 class="subtitlee">Electricista<br /></h2>
                 </div>
   
-                <figure class="testimony__picture">
+                <figure class="testimony__picture">                  
                   <img src="./images/electricista.jpg" class="testimony__img" />
                 </figure>
               </section>
   
-              <section class="testimony__body" data-id="2">
+              <section class="testimony__body" data-id="2">                
                 <div class="testimony__texts">
                   <h2 class="subtitlee">Gasista<br /></h2>
                 </div>
@@ -108,8 +116,7 @@
               <section class="testimony__body" data-id="3">
                 <div class="testimony__texts">
                   <h2 class="subtitlee">Plomería<br /></h2>
-                </div>
-  
+                </div>  
                 <figure class="testimony__picture">
                   <img src="./images/plomeria.jpg" class="testimony__img" />
                 </figure>
@@ -120,65 +127,23 @@
                 class="testimony__arrow"
                 id="next"
               />
-            </div>            
-          </section>
-      </div>
-
-      <div class="derecha">      
-          <div class="card_fondo">
-            <section class="card_body">        
-            <div class="card__perfil">
-              <div class="card__nombre">
-                <img src="images/trabajos.png" alt="" />
-                <h2>Proveedor</h2>
-              </div>
-              <hr />
-              <div class="card__descripcion">
-                <p>
-                  Por favor inicia sesión o registrate para poder ingresar a la
-                  página, si no estaras navegando como invitado y no podras acceder al
-                  perfil del proveedor.
-                </p>
-              </div>
-              <hr />
-              <div class="card__button">
-                <a class="enlace" href="proveedorLoginRegistro.html">Ingresar</a>
-              </div>
-              <br />
-            </div>
-            <div class="card__perfil">
-              <div class="card__nombre">
-                <img src="images/usuarios.jpg" alt="" />
-                <h2>Usuario</h2>
-              </div>
-              <hr />
-              <div class="card__descripcion">
-                <p>
-                  Por favor inicia sesión o registrate para poder ingresar a la
-                  página, si no estaras navegando como invitado y no podras acceder a
-                  todos los servicios.
-                </p>
-              </div>
-              <hr />
-              <div class="card__button">
-                <a class="enlace" href="UsuarioLoginRegistro.html">Ingresar</a>
-              </div>
             </div>
           </section>
-        </div>
+           
+        </section>
+      
       </div>
+       
+        
     </section>   
         
-
-          
-       
-
+ 
         
         
           <!--Forma-->
           <div style="height: 150px; overflow: hidden" class="hero__waves">
             <svg
-              viewBox="0 0 400 150"
+              viewBox="0 0 500 150"
               preserveAspectRatio="none"
               style="height: 100%; width: 100%"
             >
@@ -194,7 +159,7 @@
       <!-- SECCION SOBRE MI (la pagina) -->
       <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-          <h2 a href="nav__links">¿Sabías que?</h2>
+          <h2 a href="nav__links">Sobre nosotros</h2>
           <p>
             <span>Somos tres barrios cerrados</span> de la localidad de Chacras
             de Coria en Mendoza, <br> 
@@ -264,44 +229,146 @@
           </article>
         </section>
       </section>
-      
 
-      <footer  class="pie-pagina" id="contacto">
-        <div class="grupo-1">          
-          <div class="box">
-            <h2>Facundo Angelico <i>(Backend)</i></h2>
-            <div class="red-social">
-              <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
-              <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+       
+      <!-- RUBROS PORFOLIO / GALERÍA-->
+    <section id="portfolio" class="portfolio">
+      <div class="contenido-seccion">
+        <BR></BR><BR></BR><BR>
+      </BR><h2>Proveedores de servicios:</h2>
+
+      <p>
+          <span>Somos tres barrios cerrados</span> de la localidad de Chacras
+          de Coria en Mendoza, <br> 
+          que nos juntamos para formar una red de proveedores (Electricista,
+          Gasista, Plomería, etc.) </br> con la mejor calidad de profecionales del
+          lugar.
+        </p> <br></br>
+
+        <form action="">
+          <input
+            type="text"
+            class="barra-busqueda"
+            id="barra-busqueda"
+            placeholder="Buscar"
+          />
+        </form>
+        <div class="categorias" id="categorias">
+          <a href="#" class="activo">Todos</a>
+          <a href="#Electricista" >Electricista</a>
+          <a href="#Gasista">Gasista</a>
+          <a href="#plomero">Plomero</a>
+          
+        </div>
+        
+
+              <!--eLECTRICISTA-->
+              <div class="galeria">
+                <div class="proyecto" id="Electricista">                    
+                  <img src="images/electricista.jpg" alt="" />
+                  <div class="overlay">
+              <h3>Ingeniero Eléctrico </h3>
+              <p>Iluminación.</p>
             </div>
           </div>
-          <div class="box">
-            <h2>Marina A. López <i>(Frontend)</i></h2>
-            <div class="red-social">      
-              
-              <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
-              <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
-              
+          <div class="proyecto" id="Electricista">              
+            <img src="images/electricista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Ingeniero Eléctrico </h3>
+              <p>Ensamblar e instalar cableado eléctrico.</p>
             </div>
           </div>
-          <div class="box">
-            <h2>Santiago Moran <i>(Frontend)</i></h2>
-            <div class="red-social">
-              <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
-              <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
-             
+          <div class="proyecto" id="Electricista">              
+            <img src="images/electricista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Ingeniero Eléctrico </h3>
+              <p>Tareas de mantenimiento.</p>
             </div>
+          </div>
+          <!--GASISTA-->
+          <div class="proyecto" id="Gasista">
+            <img src="images/gasista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Gasista matriculado</h3>
+              <p>Testeos</p>
+            </div>
+          </div>
+          <div class="proyecto" id="Gasista">
+            <img src="images/gasista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Gasista matriculado</h3>
+              <p>Instalación de cañerías de gas.</p>
+            </div>
+          </div>
+          <div class="proyecto" id="Gasista">
+            <img src="images/gasista.jpg" alt="" />
+            <div class="overlay">
+              <h3>Gasista matriculado</h3>
+              <p>Tareas de mantenimiento.</p>
+            </div>           
+          </div>
+           <!--PLOMERO-->
+           <div class="proyecto" href="#plomero">
+            <img src="images/plomeria.jpg" alt="" />
+            <div class="overlay">
+              <h3>Plomeo matriculado</h3>
+              <p>Testeos</p>
+            </div>
+          </div>
+          <div class="proyecto" id="plomero">
+            <img src="images/plomeria.jpg" alt="" />
+            <div class="overlay">
+              <h3>Plomero matriculado</h3>
+              <p>Instalación de cañerías de gas.</p>
+            </div>
+          </div>
+          <div class="proyecto" id="plomero">           
+            <img src="images/plomeria.jpg" alt="" />
+            <div class="overlay">
+              <h3>Plomero matriculado</h3>
+              <p>Tareas de mantenimiento.</p>
+            </div>           
           </div>
         </div>
-        <div class="grupo-2">
-          <small
-            >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
-            Reservados.</small>
+      </div>
+  </section> 
+        
+          
+     
+  <footer class="pie-pagina" id="contacto">
+    <div class="grupo-1">          
+      <div class="box">
+        <h2>Facundo Angelico <i>(Backend)</i></h2>
+        <div class="red-social">
+          <a href="https://www.linkedin.com/in/facundo-angelico-76086b203/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/FaQki" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
         </div>
-      </footer>
-    <!--<script src="js/sweetalert2.all.js"></script>-->
-    <!--<script src="js/sweetAlert.js"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>-->
+      </div>
+      <div class="box">
+        <h2>Marina A. López <i>(Frontend)</i></h2>
+        <div class="red-social">      
+          
+          <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-9a9285229/" ><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/MarinaAraceliLopez" ><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+          
+        </div>
+      </div>
+      <div class="box">
+        <h2>Santiago Morán <i>(Frontend)</i></h2>
+        <div class="red-social">
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/linkedin.png" width="20px" alt=""></a>
+          <a href="https://github.com/Santiago-E-Moran "><img src="./images/github-mark-white.svg" width="20px" alt=""></a>
+         
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small
+        >&copy; 2023 <b>Grupo B curso EGG</b> - Todos los Derechos
+        Reservados.</small>
+    </div>
+  </footer>
+
     <script src="js/slider.js"></script>
     <script src="js/questions.js"></script>
    
