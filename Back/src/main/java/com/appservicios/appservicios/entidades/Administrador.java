@@ -1,4 +1,5 @@
-package com.appservicios.appservicios.entidades;
+/**
+package com.appservicios.appservicios.entitiy;
 
 
 
@@ -8,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 
 @Entity
-public class Administrador extends Usuario {
+public class Administrador{
 
 
     public Administrador() {
@@ -21,4 +22,4 @@ public class Administrador extends Usuario {
 
 }
 
-
+**/

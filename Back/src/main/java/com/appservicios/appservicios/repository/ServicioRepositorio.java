@@ -6,7 +6,6 @@
 package com.appservicios.appservicios.repository;
 
 import com.appservicios.appservicios.entidades.Servicio;
-import com.appservicios.appservicios.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.stereotype.Repository;

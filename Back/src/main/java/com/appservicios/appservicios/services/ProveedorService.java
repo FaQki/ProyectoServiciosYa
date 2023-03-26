@@ -7,9 +7,7 @@ import com.appservicios.appservicios.excepciones.Miexcepcion;
 import com.appservicios.appservicios.repository.ProveedorRepositorio;
 import com.appservicios.appservicios.repository.UsuarioRepositorio;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -81,7 +79,7 @@ public class ProveedorService {
         }
 
     }
-**/
+
     @Transactional
     public void eliminarProveedor(Long id_proveedor) {
 
@@ -93,5 +91,6 @@ public class ProveedorService {
         }
 
     }
+    **/
 
 }

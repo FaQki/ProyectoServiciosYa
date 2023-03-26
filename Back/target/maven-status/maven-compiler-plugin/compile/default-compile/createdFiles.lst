@@ -1,2 +1,5 @@
 com\appservicios\appservicios\AppServiciosApplication.class
 com\appservicios\appservicios\entidades\Usuario.class
+com\appservicios\appservicios\SeguridadWeb.class
+com\appservicios\appservicios\controllers\PortalControlador.class
+com\appservicios\appservicios\excepciones\Miexcepcion.class

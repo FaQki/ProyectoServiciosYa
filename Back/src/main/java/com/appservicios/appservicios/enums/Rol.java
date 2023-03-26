@@ -6,7 +6,7 @@ public enum Rol {
     USER,
     PROVEEDOR,
     ADMIN,
-    DESCONOCIDO,
+    CLIENTE,
 
 
 }

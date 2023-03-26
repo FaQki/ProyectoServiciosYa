@@ -1,7 +1,8 @@
-package com.appservicios.appservicios.services;
+/**package com.appservicios.appservicios.services;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class AdminService  {
 }
+**/

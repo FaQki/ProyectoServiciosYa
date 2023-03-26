@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/**
 package com.appservicios.appservicios.repository;
 
-import com.appservicios.appservicios.entidades.Administrador;
+import com.appservicios.appservicios.entitiy.Administrador;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author facua
- */
+
 
 @Repository
 public interface AdministradorRepositorio extends JpaRepository<Administrador, Long> {
@@ -20,3 +18,4 @@ public interface AdministradorRepositorio extends JpaRepository<Administrador, L
 
     
 }
+**/

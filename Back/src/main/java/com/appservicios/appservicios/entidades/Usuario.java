@@ -19,16 +19,16 @@ public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_Usuario; //Clave identificatoria
+    private Long id_Usuario;
     
-    private String nombre; //Apellido y nombre del Usuario
-    private String domicilio; //Domicilio exacto
+    private String nombre;
+    private String domicilio;
     private String telefono;
     private String email;
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private Rol rol; //Rol en la aplicación:USER, PROVEEDOR, ADMIN  
+    private Rol rol;
 
     @Temporal(TemporalType.DATE)
     private Date fecha_alta; //Fecha de registro
