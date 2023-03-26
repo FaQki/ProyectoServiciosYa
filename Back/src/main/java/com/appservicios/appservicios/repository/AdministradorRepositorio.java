@@ -6,7 +6,6 @@
 package com.appservicios.appservicios.repository;
 
 import com.appservicios.appservicios.entidades.Administrador;
-import com.appservicios.appservicios.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +15,7 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface AdministradorRepositorio extends JpaRepository<Administrador, Integer> {
+public interface AdministradorRepositorio extends JpaRepository<Administrador, Long> {
 
 
     

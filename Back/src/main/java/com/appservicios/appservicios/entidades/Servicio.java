@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Servicio;  //Clave de identificación del servicio
+    private Long  id_Servicio;  //Clave de identificación del servicio
 
     private String descripcion_Servicio; //Descripción del pedido del usuario
     
@@ -17,7 +17,7 @@ public class Servicio {
     private Date fecha_fin_Servicio;  //Fecha de finalización del trabajo
     
     private char tipo_Servicio; //0-aceptado, 1-finalizado, 3-cancelado
-
+    
     @ManyToOne
     private Cliente clientes; //Muchos servicios para un usuario/cliente
     @OneToOne
@@ -26,7 +26,7 @@ public class Servicio {
     public Servicio() {
     }
 
-    public Servicio(int id_Servicio, String descripcion_Servicio, Date fecha_Inicio_Servicio, Date fecha_fin_Servicio, char tipo_Servicio, Cliente clientes, Proveedor proveedores) {
+    public Servicio(Long  id_Servicio, String descripcion_Servicio, Date fecha_Inicio_Servicio, Date fecha_fin_Servicio, char tipo_Servicio, Cliente clientes, Proveedor proveedores) {
         this.id_Servicio = id_Servicio;
         this.descripcion_Servicio = descripcion_Servicio;
         this.fecha_Inicio_Servicio = fecha_Inicio_Servicio;
@@ -36,11 +36,11 @@ public class Servicio {
         this.proveedores = proveedores;
     }
 
-    public int getId_Servicio() {
+    public Long  getId_Servicio() {
         return id_Servicio;
     }
 
-    public void setId_Servicio(int id_Servicio) {
+    public void setId_Servicio(Long  id_Servicio) {
         this.id_Servicio = id_Servicio;
     }
 

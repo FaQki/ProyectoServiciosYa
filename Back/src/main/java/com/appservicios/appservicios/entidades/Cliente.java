@@ -1,42 +1,43 @@
 package com.appservicios.appservicios.entidades;
 
-
-
 import com.appservicios.appservicios.enums.Rol;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 
 @Entity
-public class Cliente extends Usuario{
+public class Cliente extends Usuario {
 
-
-    @Id
+    
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_cliente;
-    private List<Servicio> misServicios; //Listado de servicios del User/Cliente
+    private Long  id_cliente;
 
+    @OneToMany
+    private List<Servicio> misServicios; //Listado de servicios del User/Cliente
 
     public Cliente() {
     }
 
-    public Cliente(Integer dni, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
-        super(dni, nombre, domicilio, telefono, email, password, rol, fecha_alta, fecha_baja, baja);
-    }
-
-    public Cliente(List<Servicio> misServicios, Integer dni, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
-        super(dni, nombre, domicilio, telefono, email, password, rol, fecha_alta, fecha_baja, baja);
+    public Cliente(Long id_cliente, List<Servicio> misServicios) {
+        this.id_cliente = id_cliente;
         this.misServicios = misServicios;
     }
 
-    public int getId_cliente() {
+    public Cliente(Long  id_cliente, List<Servicio> misServicios, Long  id_Usuario, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
+        super(id_Usuario, nombre, domicilio, telefono, email, password, rol, fecha_alta, fecha_baja, baja);
+        this.id_cliente = id_cliente;
+        this.misServicios = misServicios;
+    }
+
+    public Long getId_cliente() {
         return id_cliente;
     }
 
-    public void setId_cliente(int id_cliente) {
+    public void setId_cliente(Long id_cliente) {
         this.id_cliente = id_cliente;
     }
 
@@ -47,5 +48,5 @@ public class Cliente extends Usuario{
     public void setMisServicios(List<Servicio> misServicios) {
         this.misServicios = misServicios;
     }
-}
 
+}

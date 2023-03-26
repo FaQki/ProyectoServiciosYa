@@ -22,7 +22,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 
 /**
  *
@@ -35,13 +34,13 @@ public class UsuarioService implements UserDetailsService {
     private UsuarioRepositorio userRepo;
 
     @Transactional
-    public void crearUsuario(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void crearUsuario(Long id_Usuario, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
-        validar(dni, nombre, domicilio, telefono, email, password, password2);
+        validar(nombre, domicilio, telefono, email, password, password2);
 
         Usuario user = new Usuario();
       
-        user.setDni(dni);
+        user.setId_Usuario(id_Usuario);
         user.setPassword(password);
         user.setNombre(nombre);
         user.setDomicilio(domicilio);
@@ -64,16 +63,16 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    public void modificarUsuario(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void modificarUsuario(Long id_Usuario, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
-        validar(dni, nombre, domicilio, telefono, email, password, password2);
+        validar(nombre, domicilio, telefono, email, password, password2);
 
-        Optional<Usuario> resp = userRepo.findById(dni);
+        Optional<Usuario> resp = userRepo.findById(id_Usuario);
 
         if (resp.isPresent()) {
 
             Usuario user = resp.get();
-            user.setDni(dni);
+            
             user.setNombre(nombre);
             user.setDomicilio(domicilio);
             user.setTelefono(telefono);
@@ -85,9 +84,9 @@ public class UsuarioService implements UserDetailsService {
 
     }
     
-    public void eliminarProveedor(Integer dni)  {
+    public void eliminarProveedor(Long id_Usuario)  {
 
-        Optional<Usuario> resp = userRepo.findById(dni);
+        Optional<Usuario> resp = userRepo.findById(id_Usuario);
         if (resp.isPresent()) {
             Usuario user = resp.get();
             userRepo.delete(user);
@@ -96,11 +95,8 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
-    public void validar(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void validar(String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
-        if (dni == null) {
-            throw new Miexcepcion("El dni no puede ser nulo");
-        }
 
         if (nombre.isEmpty() || nombre == null) {
             throw new Miexcepcion("El nombre no puede ser nulo");
@@ -127,6 +123,8 @@ public class UsuarioService implements UserDetailsService {
 
     @Override //para autenticar usuario, una vez que se loguee spring con este metodo le da los permisos..
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        
+        /**
         Usuario usuario = userRepo.buscarPorEmail(email);
 
         if (usuario != null) {
@@ -140,9 +138,10 @@ public class UsuarioService implements UserDetailsService {
             return new User(usuario.getEmail(), usuario.getPassword(), permisos);
 
         } else {
-            return null;
+             return null;
         }
-
+         **/
+return null;
     }
 
  

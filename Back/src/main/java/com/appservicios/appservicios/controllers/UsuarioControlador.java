@@ -30,7 +30,7 @@ public class UsuarioControlador {
     public String registar() {
         return "registroUsuario.html";
     }
-
+/**
     @PostMapping("/registro")
     public String registro(
             @RequestParam("dni") Integer dni,
@@ -43,7 +43,7 @@ public class UsuarioControlador {
 
         try {
 
-            usuarioService.crearUsuario(dni, nombre, domicilio, telefono, email, password, password);
+            usuarioService.crearUsuario(nombre, domicilio, telefono, email, password, password);
             
             
             modelo.put("exito", "El usuario fue creado correctamente");
@@ -56,5 +56,5 @@ public class UsuarioControlador {
         return "index.html";
 
     }
-
+**/
 }

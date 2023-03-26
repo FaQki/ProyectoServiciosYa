@@ -1,9 +1,6 @@
 package com.appservicios.appservicios.services;
 
 import com.appservicios.appservicios.entidades.Cliente;
-import com.appservicios.appservicios.entidades.Proveedor;
-import com.appservicios.appservicios.entidades.Servicio;
-import com.appservicios.appservicios.entidades.Usuario;
 import com.appservicios.appservicios.excepciones.Miexcepcion;
 import com.appservicios.appservicios.repository.ClienteRepositorio;
 
@@ -28,9 +25,9 @@ public class ClienteService  extends UsuarioService{
     private UsuarioRepositorio userRepo;
 
     @Transactional
-    public void crearCliente(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion{
+    public void crearCliente(Long id_Usuario,String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion{
 
-        crearUsuario(dni, nombre, domicilio, telefono, email, password, password2);
+        crearUsuario(id_Usuario,nombre, domicilio, telefono, email, password, password2);
 
     }
 
@@ -44,16 +41,16 @@ public class ClienteService  extends UsuarioService{
 
     }
 
-    public void modificarCliente(Integer dni, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
+    public void modificarCliente(Long id_Usuario, String nombre, String domicilio, String telefono, String email, String password, String password2) throws Miexcepcion {
 
-        validar(dni, nombre, domicilio, telefono, email, password, password2);
+        validar(nombre, domicilio, telefono, email, password, password2);
 
-        Optional<Cliente> resp = clienteRepo.findById(dni);
+        Optional<Cliente> resp = clienteRepo.findById(id_Usuario);
 
         if (resp.isPresent()) {
 
             Cliente client = resp.get();
-            client.setDni(dni);
+            client.setId_cliente(client.getId_cliente());
             client.setNombre(nombre);
             client.setDomicilio(domicilio);
             client.setTelefono(telefono);
@@ -66,7 +63,7 @@ public class ClienteService  extends UsuarioService{
     }
 
     @Transactional
-    public void eliminarCliente(int id_cliente)  {
+    public void eliminarCliente(Long id_cliente)  {
 
         Optional<Cliente> resp = clienteRepo.findById(id_cliente);
         if (resp.isPresent()) {

@@ -7,6 +7,8 @@ package com.appservicios.appservicios.repository;
 
 import com.appservicios.appservicios.entidades.Proveedor;
 import com.appservicios.appservicios.entidades.Usuario;
+import java.util.List;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -18,13 +20,10 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface ProveedorRepositorio extends JpaRepository<Proveedor, Integer> {
+public interface ProveedorRepositorio extends JpaRepository<Proveedor, Long> {
     
-     @Query("SELECT u FROM Usuario u WHERE u.dni = :dni")
-    public Usuario buscarPorDni(@Param("dni") Integer dni);
-
-    @Query("SELECT u FROM Usuario u WHERE u.email = :email")
-    public Usuario buscarPorEmail(@Param("email") String email);
+     @EntityGraph(attributePaths = {"user"})
+    List<Proveedor> findAll();
     
     
     

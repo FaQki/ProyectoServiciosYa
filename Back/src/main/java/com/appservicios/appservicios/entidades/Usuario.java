@@ -7,6 +7,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,14 +18,14 @@ import javax.persistence.TemporalType;
 public class Usuario implements Serializable {
 
     @Id
-    private Integer dni; //Clave identificatoria
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_Usuario; //Clave identificatoria
+    
     private String nombre; //Apellido y nombre del Usuario
     private String domicilio; //Domicilio exacto
     private String telefono;
     private String email;
     private String password;
-
-    
 
     @Enumerated(EnumType.STRING)
     private Rol rol; //Rol en la aplicación:USER, PROVEEDOR, ADMIN  
@@ -39,8 +41,8 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Integer dni, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
-        this.dni = dni;
+    public Usuario(Long id_Usuario, String nombre, String domicilio, String telefono, String email, String password, Rol rol, Date fecha_alta, Date fecha_baja, Boolean baja) {
+        this.id_Usuario = id_Usuario;
         this.nombre = nombre;
         this.domicilio = domicilio;
         this.telefono = telefono;
@@ -52,12 +54,12 @@ public class Usuario implements Serializable {
         this.baja = baja;
     }
 
-    public Integer getDni() {
-        return dni;
+    public Long getId_Usuario() {
+        return id_Usuario;
     }
 
-    public void setDni(Integer dni) {
-        this.dni = dni;
+    public void setId_Usuario(Long id_Usuario) {
+        this.id_Usuario = id_Usuario;
     }
 
     public String getNombre() {
@@ -132,6 +134,7 @@ public class Usuario implements Serializable {
         this.baja = baja;
     }
 
+    
     
    
 

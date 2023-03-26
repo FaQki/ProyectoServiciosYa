@@ -18,12 +18,8 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface ClienteRepositorio extends JpaRepository<Cliente, Integer> {
+public interface ClienteRepositorio extends JpaRepository<Cliente, Long> {
     
-     @Query("SELECT u FROM Usuario u WHERE u.dni = :dni")
-    public Usuario buscarPorDni(@Param("dni") Integer dni);
-
-    @Query("SELECT u FROM Usuario u WHERE u.email = :email")
-    public Usuario buscarPorEmail(@Param("email") String email);
+ 
     
 }

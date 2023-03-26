@@ -16,6 +16,6 @@ import org.springframework.stereotype.Repository;
  * @author facua
  */
 @Repository
-public interface ServicioRepositorio extends JpaRepository<Servicio, Integer> {
+public interface ServicioRepositorio extends JpaRepository<Servicio, Long> {
 
 }
